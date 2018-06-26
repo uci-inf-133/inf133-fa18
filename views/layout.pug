@@ -5,9 +5,7 @@ html
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,400,700' type='text/css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="/javascripts/jquery-2.1.4.min.js")
     script(src="/javascripts/bootstrap.min.js")
-    script(src="/javascripts/moment.min.js")
   body
     .container
       .row
@@ -30,5 +28,7 @@ html
         hr
       .row
         footer.col-xs-12
+          | Copyright &copy; 
           script.
-            $('footer').html("Copyright © " + moment().format("YYYY") + " by Daniel Epstein.");
+            document.write(new Date().getFullYear());
+          |  by Daniel Epstein.
