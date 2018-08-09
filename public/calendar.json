@@ -1,0 +1,61 @@
+{
+	"lecture" : [
+		{
+			"time": "14:00",
+			"duration": "50",
+			"location": "DBH 1100",
+			"name": "Lecture"
+		}
+	],
+	"discussion" : [
+		{
+			"time": "19:00",
+			"duration": "50",
+			"location": "SH 134",
+			"name": "Discussion 1"
+		},
+		{
+			"time": "20:00",
+			"duration": "50",
+			"location": "SH 134",
+			"name": "Discussion 2"
+		}
+	],
+	"events" : [
+		{
+			"date": "2018-09-28",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-01",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-02",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-03",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-05",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-08",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-10",
+			"type": "lecture",
+			"title": "Topic TBD"
+		}
+	]
+}
