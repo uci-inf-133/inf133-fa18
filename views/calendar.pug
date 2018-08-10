@@ -1,6 +1,18 @@
 extends layout
 
 block content
-  main.col-xs-12
-    h2 Calendar
-    p TBD
+	main.col-xs-12
+	h2 Calendar
+	each week in calendar
+		.row.row-eq-height
+			.col-xs-1
+			each day in week
+				.col-xs-2.day
+					p= day.date_str
+					each event in day.events
+						.event
+							p= event.type
+							p= event.title
+							p= event.time_str
+							p= event.location
+			.col-xs-1
