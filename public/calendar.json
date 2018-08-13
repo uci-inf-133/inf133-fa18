@@ -1,31 +1,51 @@
 {
-	"lecture" : [
-		{
-			"time": "14:00",
-			"duration": "50",
-			"location": "DBH 1100",
-			"name": "Lecture"
-		}
-	],
-	"discussion" : [
-		{
-			"time": "19:00",
-			"duration": "50",
-			"location": "SH 134",
-			"name": "Discussion 1"
+	"defaults": {
+		"lecture" : {
+			"place": [
+				{
+					"time": "14:00",
+					"duration": "50",
+					"location": "DBH 1100",
+					"label": "Lecture"
+				}
+			]
 		},
-		{
-			"time": "20:00",
-			"duration": "50",
-			"location": "SH 134",
-			"name": "Discussion 2"
+		"discussion" : {
+			"place": [
+				{
+					"time": "19:00",
+					"duration": "50",
+					"location": "SH 134",
+					"label": "Discussion 1"
+				},
+				{
+					"time": "20:00",
+					"duration": "50",
+					"location": "SH 134",
+					"label": "Discussion 2"
+				}
+			]
+		},
+		"officehours_daniel": {
+			"place": [
+				{
+					"time": "15:30",
+					"duration": "60",
+					"location": "DBH 6093",
+					"label": "Daniel Office Hour"
+				}
+			]
 		}
-	],
+	},
 	"events" : [
 		{
 			"date": "2018-09-28",
 			"type": "lecture",
 			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-09-28",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-10-01",
@@ -48,12 +68,206 @@
 			"title": "Topic TBD"
 		},
 		{
+			"date": "2018-10-05",
+			"type": "officehours_daniel"
+		},
+		{
 			"date": "2018-10-08",
 			"type": "lecture",
 			"title": "Topic TBD"
 		},
 		{
+			"date": "2018-10-09",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
 			"date": "2018-10-10",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-12",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-15",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-16",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-17",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-19",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-22",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-23",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-24",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-26",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-29",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-30",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-10-31",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-02",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-05",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-05",
+			"type": "absence",
+			"title": "Daniel Away (CSCW)"
+		},
+		{
+			"date": "2018-11-06",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-06",
+			"type": "absence",
+			"title": "Daniel Away (CSCW)"
+		},
+		{
+			"date": "2018-11-07",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-07",
+			"type": "absence",
+			"title": "Daniel Away (CSCW)"
+		},
+		{
+			"date": "2018-11-09",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-12",
+			"type": "holiday",
+			"title": "Veteran's Day (Observed)"
+		},
+		{
+			"date": "2018-11-13",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-14",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-16",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-19",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-20",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-21",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-22",
+			"type": "holiday",
+			"title": "Thanksgiving"
+		},
+		{
+			"date": "2018-11-23",
+			"type": "holiday",
+			"title": "Thanksgiving (Observed)"
+		},
+		{
+			"date": "2018-11-26",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-27",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-28",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-30",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-12-03",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-12-04",
+			"type": "discussion",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-12-05",
+			"type": "lecture",
+			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-12-07",
 			"type": "lecture",
 			"title": "Topic TBD"
 		}

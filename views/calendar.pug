@@ -10,9 +10,13 @@ block content
 				.col-xs-2.day
 					p= day.date_str
 					each event in day.events
-						.event
-							p= event.type
-							p= event.title
-							p= event.time_str
-							p= event.location
+						div(class='event ' + event.type)
+							if event.type == "lecture" || event.type == "discussion"
+								div= event.title
+								div.small= event.time_str + ' | ' + event.location
+							else if event.type == "officehours_daniel"
+								div= event.label
+								div.small= event.time_str + ' | ' + event.location
+							else if event.type == "holiday" || event.type == "absence"
+								div= event.title
 			.col-xs-1

@@ -3,6 +3,7 @@ const fs = require('fs-extra');
 var moment = require('moment');
 
 exports.loadCalendarData = () => {
+	const typeOrder = ["holiday", "absence", "major_assignment", "minor_assignment", "lecture", "discussion", "officehours_daniel"]
 	var calendar_data = fs.readJsonSync('public/calendar.json');
 	var start_date = moment(calendar_data.events[0].date);
 	var end_date = moment(calendar_data.events[calendar_data.events.length - 1].date);
@@ -31,19 +32,34 @@ exports.loadCalendarData = () => {
 		var calendar_date = calendar_dates[calendarI];
 		var eventDate = moment(event.date);
 		if(calendar_date.month == eventDate.month() && calendar_date.date == eventDate.date()) {
-			calendar_data[event.type].forEach((lecture) => {
-				//TODO: a lot of events will have different info (no times, etc)
-				var start_time = moment(event.date + " " + lecture.time);
-				var end_time = moment(start_time).add(lecture.duration, "minutes");
-				calendar_dates[calendarI].events.push({
-					"type": event.type,
-					"title": event.title,
-					"time_str": start_time.format("h:mm") + "-" + end_time.format("h:mm"),
-					"location": lecture.location
+			var eventsToPush = [];
+			//Add defaults
+			if(event.type in calendar_data.defaults && "place" in calendar_data.defaults[event.type]) {
+				eventsToPush = calendar_data.defaults[event.type]["place"].map((place) => {
+					var start_time = moment(event.date + " " + place.time);
+					var end_time = moment(start_time).add(place.duration, "minutes");
+					return {
+						"time_str": start_time.format("h:mm") + "-" + end_time.format("h:mm"),
+						"location": place.location,
+						"label": place.label
+					}
 				});
-			})
+			} else {
+				eventsToPush.push({});
+			}
+			eventsToPush.forEach((e, i) => {
+				eventsToPush[i].type = event.type;
+				if("title" in event) {
+					eventsToPush[i].title = event.title;
+				}
+			});
+			calendar_dates[calendarI].events = calendar_dates[calendarI].events.concat(eventsToPush);
 			eventI++;
 		} else {
+			//Sort events in date
+			calendar_dates[calendarI].events.sort((a, b) => {
+				return typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type);
+			});
 			calendarI++;
 		}
 	}
@@ -60,15 +76,28 @@ exports.loadCalendarData = () => {
 exports.writeICS = () => {
 	var calendar_data = fs.readJsonSync('public/calendar.json');
 	var ics_events = [].concat.apply([], calendar_data.events.map((e) => {
-		return calendar_data[e.type].map((l) => {
-			var time = moment(e.date + " " + l.time);
+		if(e.type in calendar_data.defaults && "place" in calendar_data.defaults[e.type]) {
+			return calendar_data.defaults[e.type].place.map((l) => {
+				var time = moment(e.date + " " + l.time);
+				var title = l.label;
+				if("title" in e) {
+					title += ": " + e.title
+				}
+				return {
+					"title": title,
+					"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
+					"duration": {minutes: l.duration},
+					"location": l.location
+				};
+			});
+		} else {
+			var time = moment(e.date);
 			return {
-				"title": l.name + ": " + e.title,
+				"title": e.title,
 				"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
-				"duration": {minutes: l.duration},
-				"location": l.location
-			};
-		});
+				"duration": {days: 1}
+			}
+		}
 	}));
 
 	ics.createEvents(ics_events, (error, value) => {

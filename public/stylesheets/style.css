@@ -261,10 +261,39 @@ a:visited {
 
 .day {
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
+	margin: 1px;
 }
 
 .event {
-	border-style: solid;
-	border-width: 2px;
+	margin: 2px;
+	padding: 2px;
+}
+
+.lecture {
+	background-color: #6699CC;
+}
+
+.discussion {
+	background-color: #8CB369;
+}
+
+.holiday {
+	background-color: #FFF275;
+}
+
+.minor_assignment {
+	background-color: #967D69;
+}
+
+.major_assignment {
+	background-color: #FF8C42;
+}
+
+.absence {
+	background-color: #F4B9B2;
+}
+
+.officehours_daniel {
+	background-color: #DAEDBD;
 }
