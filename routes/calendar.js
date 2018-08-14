@@ -94,7 +94,7 @@ exports.writeICS = () => {
 			var time = moment(e.date);
 			return {
 				"title": e.title,
-				"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
+				"start": [time.year(), time.month() + 1, time.date(), 0, 0],
 				"duration": {days: 1}
 			}
 		}

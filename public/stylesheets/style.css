@@ -46,11 +46,6 @@ hr {
 body {
 	padding: 50px;
 	font-family: 'ChaparralPro', serif;
-	font-size: 1.5em;
-}
-
-p {
-	font-size: 1.1em;
 }
 
 .container {
@@ -59,11 +54,6 @@ p {
 
 nav {
 	text-align: right;
-	top: 50%;
-	-webkit-transform: translateY(50%);
-	-ms-transform: translateY(50%);
-	transform: translateY(50%);
-	font-size: 1em;
 }
 
 @media screen and (max-width : 800px)
@@ -93,21 +83,17 @@ nav > a {
 	margin:0px;
 }
 
-footer {
-	text-align: center;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 }
 
 h1 {
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 h2 {
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 aside {
@@ -133,32 +119,6 @@ aside > a {
 aside > a > span {
 	vertical-align: top;
 	line-height: 16px;
-}
-
-.project > .image > img {
-	max-width: 200px;
-	margin-bottom: 20px;
-}
-
-.project > .description > h2 {
-	margin: 0px 0px 20px 0px;
-}
-
-.project > .description > h3 {
-	font-size: 1.2em;
-	margin: 40px 0px 0px 0px;
-}
-
-svg.icon {
-	width: 16px;
-	height: 16px;
-	padding: 1px 2px;
-}
-
-img.instagram {
-	width: 60px;
-	height: 60px;
-	padding: 2px;
 }
 
 cite {
@@ -193,34 +153,8 @@ cite > .notes {
 	font-size: 0.8em;
 }
 
-.show {
-	text-align: center;
-	font-family: 'Lato', sans-serif;
-}
-
 hr {
 	border-top: 1px solid #888;
-}
-
-hr.publications {
-	margin: 10px 0px;
-}
-
-hr.projects {
-	margin: 50px 0px;
-}
-
-.show > span {
-	font-weight: 700;
-}
-
-.show > label {
-	font-weight: 400;
-	padding: 5px;
-}
-
-.show > label > input[type="checkbox"] {
-	margin: 2px;
 }
 
 a {
