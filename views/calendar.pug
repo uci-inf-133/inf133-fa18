@@ -1,22 +1,22 @@
 extends layout
 
 block content
-	main.col-xs-12
-	h2 Calendar
-	each week in calendar
-		.row.row-eq-height
-			.col-xs-1
-			each day in week
-				.col-xs-2.day
-					p= day.date_str
-					each event in day.events
-						div(class='event ' + event.type)
-							if event.type == "lecture" || event.type == "discussion"
-								div= event.title
-								div.small= event.time_str + ' | ' + event.location
-							else if event.type == "officehours_daniel"
-								div= event.label
-								div.small= event.time_str + ' | ' + event.location
-							else if event.type == "holiday" || event.type == "absence"
-								div= event.title
-			.col-xs-1
+	main.container-fluid
+		h2 Calendar
+		each week in calendar
+			.row.row-eq-height
+				.col-1
+				each day in week
+					.col-2.day
+						p= day.date_str
+						each event in day.events
+							div(class='event ' + event.type)
+								if event.type == "lecture" || event.type == "discussion"
+									div= event.title
+									div.small= event.time_str + ' | ' + event.location
+								else if event.type == "officehours_daniel"
+									div= event.label
+									div.small= event.time_str + ' | ' + event.location
+								else if event.type == "holiday" || event.type == "absence"
+									div= event.title
+				.col-1
