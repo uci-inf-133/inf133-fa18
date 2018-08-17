@@ -80,22 +80,24 @@ exports.writeICS = () => {
 		if(e.type in calendar_data.defaults && "place" in calendar_data.defaults[e.type]) {
 			return calendar_data.defaults[e.type].place.map((l) => {
 				var time = moment(e.date + " " + l.time);
+				time.subtract(time_zone, "hours");
 				var title = l.label;
 				if("title" in e) {
 					title += ": " + e.title
 				}
 				return {
 					"title": title,
-					"start": [time.year(), time.month() + 1, time.date(), time.hour() - time_zone, time.minute()],
+					"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
 					"duration": {minutes: l.duration},
 					"location": l.location
 				};
 			});
 		} else {
 			var time = moment(e.date);
+			time.hour(-time_zone);
 			return {
 				"title": e.title,
-				"start": [time.year(), time.month() + 1, time.date(), -time_zone, 0],
+				"start": [time.year(), time.month() + 1, time.date(), time.hour(), 0],
 				"duration": {days: 1}
 			}
 		}
