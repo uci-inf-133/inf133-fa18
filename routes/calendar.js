@@ -74,7 +74,6 @@ exports.loadCalendarData = () => {
 }
 
 exports.writeICS = () => {
-	var time_zone = -8; //Pacific is UTC-8, so need to offset the -8.
 	var calendar_data = fs.readJsonSync('public/calendar.json');
 	var ics_events = [].concat.apply([], calendar_data.events.map((e) => {
 		if(e.type in calendar_data.defaults && "place" in calendar_data.defaults[e.type]) {
