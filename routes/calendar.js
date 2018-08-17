@@ -101,15 +101,11 @@ exports.writeICS = () => {
 		}
 	}));
 
-	ics.createEvents(ics_events, (error, cal) => {
+	ics.createEvents(ics_events, (error, value) => {
 		if(error) {
 			console.log(error);
 		} else {
-			//Manually add the timezone information
-			var split_on = "X-PUBLISHED-TTL:PT1H";
-			var split_cal = cal.split(split_on);
-			var tz = "\r\nBEGIN:VTIMEZONE\r\nTZID:America/Los_Angeles\r\nLAST-MODIFIED:20050809T050000Z\r\nBEGIN:STANDARD\r\nDTSTART:20071104T020000\r\nTZOFFSETFROM:-0700\r\nTZOFFSETTO:-0800\r\nTZNAME:PST\r\nEND:STANDARD\r\nBEGIN:DAYLIGHT\r\nDTSTART:20070311T020000\r\nTZOFFSETFROM:-0800\r\nTZOFFSETTO:-0700\r\nTZNAME:PDT\r\nEND:DAYLIGHT\r\nEND:VTIMEZONE";
-			fs.writeFileSync('public/calendar.ics', split_cal[0] + split_on + tz + split_cal[1]);
+			fs.writeFileSync('public/calendar.ics', value);
 		}
 	});
 }
