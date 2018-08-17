@@ -74,6 +74,7 @@ exports.loadCalendarData = () => {
 }
 
 exports.writeICS = () => {
+	var time_zone = -8; //Pacific is UTC-8, so need to offset the -8.
 	var calendar_data = fs.readJsonSync('public/calendar.json');
 	var ics_events = [].concat.apply([], calendar_data.events.map((e) => {
 		if(e.type in calendar_data.defaults && "place" in calendar_data.defaults[e.type]) {
@@ -85,7 +86,7 @@ exports.writeICS = () => {
 				}
 				return {
 					"title": title,
-					"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
+					"start": [time.year(), time.month() + 1, time.date(), time.hour() - time_zone, time.minute()],
 					"duration": {minutes: l.duration},
 					"location": l.location
 				};
@@ -94,7 +95,7 @@ exports.writeICS = () => {
 			var time = moment(e.date);
 			return {
 				"title": e.title,
-				"start": [time.year(), time.month() + 1, time.date()],
+				"start": [time.year(), time.month() + 1, time.date(), -time_zone, 0],
 				"duration": {days: 1}
 			}
 		}
