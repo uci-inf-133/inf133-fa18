@@ -80,7 +80,6 @@ exports.writeICS = () => {
 		if(e.type in calendar_data.defaults && "place" in calendar_data.defaults[e.type]) {
 			return calendar_data.defaults[e.type].place.map((l) => {
 				var time = moment(e.date + " " + l.time);
-				time.subtract(time_zone, "hours");
 				var title = l.label;
 				if("title" in e) {
 					title += ": " + e.title
@@ -94,20 +93,23 @@ exports.writeICS = () => {
 			});
 		} else {
 			var time = moment(e.date);
-			time.hour(-time_zone);
 			return {
 				"title": e.title,
-				"start": [time.year(), time.month() + 1, time.date(), time.hour(), 0],
+				"start": [time.year(), time.month() + 1, time.date()],
 				"duration": {days: 1}
 			}
 		}
 	}));
 
-	ics.createEvents(ics_events, (error, value) => {
+	ics.createEvents(ics_events, (error, cal) => {
 		if(error) {
 			console.log(error);
 		} else {
-			fs.writeFileSync('public/calendar.ics', value);
+			//Manually add the timezone information
+			var split_on = "X-PUBLISHED-TTL:PT1H";
+			var split_cal = cal.split(split_on);
+			var tz = "\r\nBEGIN:VTIMEZONE\r\nTZID:America/Los_Angeles\r\nLAST-MODIFIED:20050809T050000Z\r\nBEGIN:STANDARD\r\nDTSTART:20071104T020000\r\nTZOFFSETFROM:-0700\r\nTZOFFSETTO:-0800\r\nTZNAME:PST\r\nEND:STANDARD\r\nBEGIN:DAYLIGHT\r\nDTSTART:20070311T020000\r\nTZOFFSETFROM:-0800\r\nTZOFFSETTO:-0700\r\nTZNAME:PDT\r\nEND:DAYLIGHT\r\nEND:VTIMEZONE";
+			fs.writeFileSync('public/calendar.ics', split_cal[0] + split_on + tz + split_cal[1]);
 		}
 	});
 }
