@@ -3,8 +3,12 @@ const fs = require('fs-extra');
 var moment = require('moment');
 
 exports.loadCalendarData = () => {
-	const typeOrder = ["holiday", "absence", "major_assignment", "minor_assignment", "lecture", "discussion", "officehours_daniel"]
+	const typeOrder = ["holiday", "absence", "assignment", "quiz", "lecture", "discussion", "officehours_daniel"]
 	var calendar_data = fs.readJsonSync('public/calendar.json');
+	//Sort calendar events
+	calendar_data.events.sort((a, b) => {
+		return moment(a.date) - moment(b.date);
+	});
 	var start_date = moment(calendar_data.events[0].date);
 	var end_date = moment(calendar_data.events[calendar_data.events.length - 1].date);
 	var calendar_start_date = moment(start_date).subtract(start_date.day(), "days");
@@ -52,6 +56,9 @@ exports.loadCalendarData = () => {
 				if("title" in event) {
 					eventsToPush[i].title = event.title;
 				}
+				if("name" in event) {
+					eventsToPush[i].name = event.name;
+				}
 			});
 			calendar_dates[calendarI].events = calendar_dates[calendarI].events.concat(eventsToPush);
 			eventI++;
@@ -90,6 +97,23 @@ exports.writeICS = () => {
 					"location": l.location
 				};
 			});
+		} else if(e.type == "assignment") {
+			var time = moment(e.date);
+			time.add(1, 'days');
+			time.hour(4);//set calendar event for 4am
+			return {
+				"title": e.title + ": " + e.name,
+				"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
+				"duration": {minutes: 60}
+			}
+		}
+		else if(e.type == "quiz") {
+			var time = moment(e.date);
+			return {
+				"title": e.title + ": " +e.name,
+				"start": [time.year(), time.month() + 1, time.date()],
+				"duration": {days: 1}
+			}
 		} else {
 			var time = moment(e.date);
 			return {

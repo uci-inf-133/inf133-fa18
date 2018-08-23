@@ -29,127 +29,182 @@
 		"officehours_daniel": {
 			"place": [
 				{
-					"time": "15:30",
+					"time": "16:00",
 					"duration": "60",
 					"location": "DBH 6093",
 					"label": "Daniel Office Hour"
 				}
 			]
+		},
+		"assignment" : {
+
 		}
 	},
 	"events" : [
 		{
 			"date": "2018-09-28",
 			"type": "lecture",
-			"title": "Topic TBD"
-		},
-		{
-			"date": "2018-09-28",
-			"type": "officehours_daniel"
+			"title": "Introduction & Human Perception"
 		},
 		{
 			"date": "2018-10-01",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "HTML & Accessibility"
+		},
+		{
+			"date": "2018-10-01",
+			"type": "assignment",
+			"title": "A0 Due",
+			"name": "Getting to Know You, Getting to Know Us"
 		},
 		{
 			"date": "2018-10-02",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
 		},
 		{
 			"date": "2018-10-03",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "CSS"
+		},
+		{
+			"date": "2018-10-03",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-10-05",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Responsive Design"
 		},
 		{
 			"date": "2018-10-05",
-			"type": "officehours_daniel"
+			"type": "assignment",
+			"title": "A1 Due",
+			"name": "HTML"
 		},
 		{
 			"date": "2018-10-08",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Bootstrap"
 		},
 		{
 			"date": "2018-10-09",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
+		},
+		{
+			"date": "2018-10-09",
+			"type": "quiz",
+			"title": "Quiz",
+			"name": "HTML, CSS, & Responsiveness"
 		},
 		{
 			"date": "2018-10-10",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "JavaScript & TypeScript"
+		},
+		{
+			"date": "2018-10-10",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-10-12",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "DOM Manipulation"
+		},
+		{
+			"date": "2018-10-12",
+			"type": "assignment",
+			"title": "A2 Due",
+			"name": "Responsive Web"
 		},
 		{
 			"date": "2018-10-15",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "JSON & Time"
 		},
 		{
 			"date": "2018-10-16",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
 		},
 		{
 			"date": "2018-10-17",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Asynchronous Input"
+		},
+		{
+			"date": "2018-10-17",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-10-19",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "AJAX, Fetch, & Promises"
 		},
 		{
 			"date": "2018-10-22",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Separation in Angular"
 		},
 		{
 			"date": "2018-10-23",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
+		},
+		{
+			"date": "2018-10-23",
+			"type": "quiz",
+			"title": "Quiz",
+			"name": "Asynchronous JavaScript & Data Formats"
 		},
 		{
 			"date": "2018-10-24",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Components in Angular"
+		},
+		{
+			"date": "2018-10-24",
+			"type": "officehours_daniel"
+		},
+		{
+			"date": "2018-10-24",
+			"type": "assignment",
+			"title": "A3 Due",
+			"name": "JavaScript & TypeScript"
 		},
 		{
 			"date": "2018-10-26",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "HTTP Requests & Security"
 		},
 		{
 			"date": "2018-10-29",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Libraries & OAuth"
 		},
 		{
 			"date": "2018-10-30",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
 		},
 		{
 			"date": "2018-10-31",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Beyond Mouse & Keyboard"
+		},
+		{
+			"date": "2018-10-31",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-11-02",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "SASS & Mobile UI Components"
+		},
+		{
+			"date": "2018-11-02",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-11-05",
@@ -164,7 +219,7 @@
 		{
 			"date": "2018-11-06",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
 		},
 		{
 			"date": "2018-11-06",
@@ -172,6 +227,12 @@
 			"title": "Daniel Away (CSCW)"
 		},
 		{
+			"date": "2018-11-06",
+			"type": "quiz",
+			"title": "Quiz",
+			"name": "HTTP Requests & Input Techniques"
+		},
+		{
 			"date": "2018-11-07",
 			"type": "lecture",
 			"title": "Topic TBD"
@@ -182,9 +243,19 @@
 			"title": "Daniel Away (CSCW)"
 		},
 		{
+			"date": "2018-11-07",
+			"type": "assignment",
+			"title": "A4 Due",
+			"name": "Angular"
+		},
+		{
 			"date": "2018-11-09",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Hybrid & Native Architectures"
+		},
+		{
+			"date": "2018-11-09",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-11-12",
@@ -194,32 +265,52 @@
 		{
 			"date": "2018-11-13",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
 		},
 		{
 			"date": "2018-11-14",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Databases"
+		},
+		{
+			"date": "2018-11-14",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-11-16",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Device Resources"
 		},
 		{
 			"date": "2018-11-19",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Device Sensors"
+		},
+		{
+			"date": "2018-11-19",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-11-20",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
+		},
+		{
+			"date": "2018-11-20",
+			"type": "quiz",
+			"title": "Quiz",
+			"name": "Research Topics & Architectures"
 		},
 		{
 			"date": "2018-11-21",
 			"type": "lecture",
 			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-21",
+			"type": "assignment",
+			"title": "A5 Due",
+			"name": "Ionic"
 		},
 		{
 			"date": "2018-11-22",
@@ -234,42 +325,62 @@
 		{
 			"date": "2018-11-26",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Analytics & Telemetry"
 		},
 		{
 			"date": "2018-11-27",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
 		},
 		{
 			"date": "2018-11-28",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Testing"
+		},
+		{
+			"date": "2018-11-28",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-11-30",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Wearables"
 		},
 		{
 			"date": "2018-12-03",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Augmented & Virtual Reality"
 		},
 		{
 			"date": "2018-12-04",
 			"type": "discussion",
-			"title": "Topic TBD"
+			"title": "Discussion"
+		},
+		{
+			"date": "2018-12-04",
+			"type": "quiz",
+			"title": "Quiz",
+			"name": "Sensors, Telemetry, Testing, & Other Devices"
 		},
 		{
 			"date": "2018-12-05",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Speech Interaction"
+		},
+		{
+			"date": "2018-12-05",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2018-12-07",
 			"type": "lecture",
-			"title": "Topic TBD"
+			"title": "Wrap-Up"
+		},
+		{
+			"date": "2018-12-10",
+			"type": "assignment",
+			"title": "A6 Due",
+			"name": "Databases & Sensing"
 		}
 	]
 }
