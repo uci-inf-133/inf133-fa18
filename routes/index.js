@@ -14,8 +14,12 @@ router.get('/assignments', function(req, res, next) {
   res.render('assignments', { });
 });
 
-router.get('/project', function(req, res, next) {
-  res.render('project', { });
+router.get('/resources', function(req, res, next) {
+  res.render('resources', { });
+});
+
+router.get('/syllabus', function(req, res, next) {
+  res.render('syllabus', { });
 });
 
 router.get('/calendar', function(req, res, next) {

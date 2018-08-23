@@ -1,0 +1,109 @@
+extends layout
+
+block content
+	main.container-fluid
+		h1 Syllabus
+		p Policies and background for IN4MATX 133, Fall 2018 Quarter. 
+			tbd All syllabus content is subject to change, particularly prior to the start of the quarter.
+		h2 Course Description
+		p From the 
+			a(href="http://catalogue.uci.edu/search/?P=IN4MATX%20133") catalog
+			| :
+			blockquote Introduction to human-computer interaction programming. Emphasis on current tools, standards, methodologies for implementing effective interaction designs. Widget toolkits, Web interface programming, geo-spatial and map interfaces, mobile phone interfaces.
+		p In practice, every instructor takes a slightly different bend to these topics. I focus on covering modern technologies for web and mobile development and how device capabilities can impact interface design and software architecture.
+		p All students must have taken 
+			a(href="http://catalogue.uci.edu/search/?P=I%26C%20SCI%2045J") I&amp;C SCI 45J
+			|  with a C- or higher. This course will also assume students have mastered material in prior courses.
+		h3 Learning Objectives
+		p At the end of this course, students should be able to:
+			ul
+				li Create web applications which are sensitive to screen size and a person's abilities
+				li Leverage external data sources and APIs via asynchronous HTTP requests
+				li Develop hybrid mobile applications which take advantage of on-device utilities
+				li Describe affordances of different screen modalities and input techniques
+				li Identify the strengths and weaknesses of web and mobile development frameworks
+				li Articulate and implement secure practices for authentication, storage, and communication in web and mobile
+		h2 Communication
+		p Slack Channel: 
+			a(href="https://uci-inf133-fa18.slack.com") https://uci-inf133-fa18.slack.com
+			| . Sign up 
+			a(href="https://join.slack.com/t/uci-inf133-fa18/signup") here
+			| .
+		p Course Staff Email: 
+			tbd TBD
+		p The course staff gets a lot of email from the University, other faculty, staff, and students about all sorts of topics. In a class as large as this one, it’s easy for student questions to get lost. Our course Slack channel is therefore the best way to get in touch with us around assignment questions or clarifications. This lets you get support and advice from the whole class, not only the course staff. Slack is also more conducive to the resolving the types of questions which typically arise when programming.
+		p When you do send an email, please send it to the course list rather than emailing Professor Epstein directly. Doing so will help ensure the message does not get lost and will help the entire course staff stay informed.
+		p This course will be 
+			strong Slack-first
+			| . This means that updates to the course, etc. will usually be shared on Slack first and may or may not be repeated over email or in class.
+		h2 Assessment
+		p Grades will be calculated as follows:
+			ul
+				li Assignments: 45%
+				ul
+					li A0: Getting to Know You, Getting to Know Us (1%)
+					li A1: HTML (3%)
+					li A2: Responsive Web (5%)
+					li A3: Javascript &amp; TypeScript (8%)
+					li A4: Angular (10%)
+					li A5: Ionic (10%)
+					li A6: Databases &amp; Sensing (8%)
+				li Quizzes: 45%
+				li Participation: 10%
+				li Professional penalty: up to -100%. We expect students to be respectful to course staff and classmates, and unprofessionalism can be held against a student when calculating final grades. This penalty will only be assessed in extreme cases; we will give a warning prior to any action.
+		p Areas may be curved to ensure grades align with student successes toward learning objectives. We expect any curve would be "up" rather than "down".
+		h3 Assignment Due Dates
+		p Unless otherwise specified, all assignments are due “at the end of the day” on whatever date is listed on the calendar. In practice, we will implement this on Canvas as 4:00am the *following* day. Meaning, an assignment listed on the calendar as due on Friday, October 23rd must be submitted by 4:00am on Saturday, October 24th to be considered “on time”.
+		h3 Late Assignments
+		p Late assignments will be assessed a 20% penalty for each 24-hour period after the due date. Assignments more than two days late will not be accepted.
+		p Each student will be granted two “late days” which they can use on any assignment over the course of the quarter. It would help the course staff if students uploading late assignments could indicate in the assignment description if they are using one, or both, late days.
+		p Exceptional circumstances such as family or personal emergencies, illness, or professional-related travel will be evaluated on a case-by-case basis. Please email the course staff if an exceptional circumstance occurs.
+		h3 Quizzes
+		p Quizzes will occur approximately every other week during discussion section, resulting in five quizzes total. A student’s top four quiz will comprise their quiz average, while the lowest score will be dropped.
+		p Unless otherwise specified, quizzes will take place in-person and on paper during the second half of discussion section (last 20 minutes). If an exceptional circumstance precludes you from attending discussion on a quiz day, please email the course staff (ideally at least a day *before* the discussion section). Given the flexible drop policy, it is possible that no additional action will be taken.
+		p Quizzes will span the theoretical knowledge in the course, such as tradeoffs between frameworks and input techniques. Though quizzes may additionally draw on concepts from the assignments, they will rarely require writing any code. Though quiz topics will usually be specified ahead of time and relate to recent topics, they may occasionally revisit older material.
+		h3 Participation
+		p Participation will be operationalized through clicker responses to in-class questions during lecture (none during discussion). The correctness of responses will *not* be evaluated, only whether a student submitted a response on their registered device.
+		p Participation grade will be evaluated by averaging a student’s number of responses per day relative to the number of questions (e.g., 75% for 3 submitted responses out of 4 questions on a day). To account for help account for travel, etc. during the quarter, a student’s three days with the lowest score will be dropped.
+		p Again, if you have an exceptional circumstance, please email the course staff. Given the drop policy, it is possible that no additional action will be taken.
+		h2 Attendance
+		p In alignment with the above, attendance at lecture is required if a student wants credit for participation. Giving your clicker to a classmate, etc. is an attempt to pass someone else's work off as your own (see the 
+			a(href="#integrity") Academic Integrity
+			|  section). Quiz sections are similarly required if a student wants the opportunity to take that week's quiz.
+		p Discussion sections without a quiz are optional, but attending is a great opportunity to consult with the course staff and classmates.
+		h2 Online Resources and Collaboration
+		p In general, the course staff expects that you will look at code and examples from many online resources as part of the assignments. This is often critical to the work of developers today. The best developers are adept at interpreting the examples they see, customizing them to their specific situation, and citing their sources so they can find them later. We expect you to do the same.
+		p While learning from examples is encouraged, attempting to pass an existing project or example from the web as your own is not allowed. If you ever have a question about what is or is not appropriate, feel free to ask the course staff!
+		p Talking to classmates about class material, assignment requirements, etc. is a great way to verify ideas and get feedback. But this distinctly does *not* permit attempting to pass off someone else’s code as your own. Talking over ideas and approaches is allowed, but the work that you produce and submit must be your own.
+		p The CSE department at the University of Washington, where Professor Epstein got his Ph.D., had the Gilligan’s Island rule:
+			blockquote After discussing with someone, get rid of all written records of the collaboration (no whiteboards, email, paper, etc.) and then engage in a totally unrelated activity like watching Gilligan’s Island before returning to the work.
+			| In essence, feel free to talk to others, but take a break to ensure you’ve learned from the collaboration rather than copied.
+		h2(id="integrity") Academic Integrity
+		p Our hope is that you’re taking this class because you’re excited to build user interfaces and want to follow good principles for doing so. Our job as the course staff is to help facilitate your learning. The assignments, quizzes, and participation requirements in this course are designed to help toward that learning. Naturally, there will be ways to shortcut this learning to arrive at a desirable solution with the least amount of effort. But by doing so, you’re missing the opportunity to learn the topics.
+		p As discussed above, acknowledge your sources. Attempting to pass someone else’s work off as your own is not allowed. If you do so, you will receive a failing grade for the assignment or the entire course at the instructor’s discretion. The course staff will report the incident to UCI’s Office of Academic Integrity &amp; Student Conduct. What will follow will be unpleasant, just don’t do it. 
+		p If you’re having problems in this course, come talk to the course staff. The shortcut isn’t worth it.
+		p For more info, take a look at 
+			a(href="https://aisc.uci.edu/students/academic-integrity/index.php") UCI's academic integrity policy
+			|  and 
+			a(href="https://www.acm.org/publications/policies/plagiarism") ACM's
+			|. Talk to the course staff if you have additional questions.
+		h2 Accomodations
+		p If you think you need an accommodation for a physical, psychiatric, or learning disability, please let the course staff know as soon as possible. Some aspects of the course including assignments, in-class activities, and teaching style may be modified to facilitate your participation and progress. If you have not already done so, consider contacting the Disability Services Center at 
+			a(href="mailto:dsc@uci.edu") dsc@uci.edu
+			|  or 
+			a(href="tel:949-824-7494") 949-824-7494
+			| . Information on registering with DSC is available at 
+			a(href="http://www.dsc.uci.edu/") http://www.dsc.uci.edu/
+			| .
+		h2 Acknowledgments
+		p This course and syllabus pull content from prior offerings of 133 by 
+			a(href="http://www.djp3.net/") Don Patterson
+			|  and  
+			a(href="https://madebypaul.com/") Paul Lumsdaine
+			|  at UCI as well as related courses by 
+			a(href="http://www.smunson.com/") Sean Munson
+			|  and 
+			a(href="https://faculty.washington.edu/joelross/") Joel Ross
+			|  at UW and 
+			a(href="http://marksherriff.com/") Mark Sherriff
+			|  at UVA. Thanks, everyone!
