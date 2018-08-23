@@ -54,7 +54,7 @@
 		{
 			"date": "2018-10-01",
 			"type": "assignment",
-			"title": "A0 Due",
+			"title": "A0",
 			"name": "Getting to Know You, Getting to Know Us"
 		},
 		{
@@ -79,7 +79,7 @@
 		{
 			"date": "2018-10-05",
 			"type": "assignment",
-			"title": "A1 Due",
+			"title": "A1",
 			"name": "HTML"
 		},
 		{
@@ -115,7 +115,7 @@
 		{
 			"date": "2018-10-12",
 			"type": "assignment",
-			"title": "A2 Due",
+			"title": "A2",
 			"name": "Responsive Web"
 		},
 		{
@@ -170,7 +170,7 @@
 		{
 			"date": "2018-10-24",
 			"type": "assignment",
-			"title": "A3 Due",
+			"title": "A3",
 			"name": "JavaScript & TypeScript"
 		},
 		{
@@ -245,7 +245,7 @@
 		{
 			"date": "2018-11-07",
 			"type": "assignment",
-			"title": "A4 Due",
+			"title": "A4",
 			"name": "Angular"
 		},
 		{
@@ -309,7 +309,7 @@
 		{
 			"date": "2018-11-21",
 			"type": "assignment",
-			"title": "A5 Due",
+			"title": "A5",
 			"name": "Ionic"
 		},
 		{
@@ -379,7 +379,7 @@
 		{
 			"date": "2018-12-10",
 			"type": "assignment",
-			"title": "A6 Due",
+			"title": "A6",
 			"name": "Databases & Sensing"
 		}
 	]

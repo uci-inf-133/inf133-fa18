@@ -2,7 +2,13 @@ const ics = require('ics');
 const fs = require('fs-extra');
 var moment = require('moment');
 
-exports.loadCalendarData = () => {
+//This is bad practice! I should be getting all of these from the JSON file.
+//TODO: fix this later.
+var assignment_hour = 4; //4am
+var quiz_hour = 21; //9pm, after the last section
+var lecture_hour = 15; //3pm
+
+exports.getCalendarData = () => {
 	const typeOrder = ["holiday", "absence", "assignment", "quiz", "lecture", "discussion", "officehours_daniel"]
 	var calendar_data = fs.readJsonSync('public/calendar.json');
 	//Sort calendar events
@@ -80,6 +86,50 @@ exports.loadCalendarData = () => {
 	return calendar_weeks;
 }
 
+exports.getUpcomingAssignmentsAndQuizzes = (howMany) => {
+	var calendar_data = fs.readJsonSync('public/calendar.json');
+	upcoming_assignments_and_quizzes = calendar_data.events.filter(event => {
+		due_date = moment(event.date);
+		if(event.type == 'assignment') {
+			due_date.add(1, 'days');
+			due_date.hour(assignment_hour);
+		} else if(event.type == 'quiz') {
+			due_date.hour(quiz_hour);
+		} else {
+			return false;
+		}
+		return moment() <= due_date;
+	}).sort((a, b) => { //Sort ascending
+		return moment(a.date) - moment(b.date);
+	}).slice(0, howMany);
+	return upcoming_assignments_and_quizzes.map(event => {
+		return {
+			'date': moment(event.date).format('ddd MMM D'),
+			'name': event.title + ' (' + event.name + ')'
+		};
+	});
+}
+
+exports.getRecentLectures = (howMany) => {
+	var calendar_data = fs.readJsonSync('public/calendar.json');
+	recent_lectures = calendar_data.events.filter(event => {
+		if(event.type != 'lecture') {
+			return false;
+		}
+		lecture_time = moment(event.date);
+		lecture_time.hour(lecture_hour);
+		return moment() >= moment(event.date);
+	}).sort((a, b) => { //Sort descending
+		return moment(b.date) - moment(a.date);
+	}).slice(0, howMany);
+	return recent_lectures.map(event => {
+		return {
+			'date': moment(event.date).format('ddd MMM D'),
+			'name': event.title
+		};
+	});
+}
+
 exports.writeICS = () => {
 	var calendar_data = fs.readJsonSync('public/calendar.json');
 	var ics_events = [].concat.apply([], calendar_data.events.map((e) => {
@@ -100,7 +150,7 @@ exports.writeICS = () => {
 		} else if(e.type == "assignment") {
 			var time = moment(e.date);
 			time.add(1, 'days');
-			time.hour(4);//set calendar event for 4am
+			time.hour(assignment_hour);//set calendar event for 4am
 			return {
 				"title": e.title + ": " + e.name,
 				"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],

@@ -23,7 +23,10 @@ block content
 									div= event.time_str + ' | ' + event.location
 								else if event.type == "holiday" || event.type == "absence"
 									div.title= event.title
-								else if event.type == "assignment" || event.type == "quiz"
+								else if event.type == "assignment"
+									div.title= event.title + ' Due'
+									div= event.name
+								else if event.type == "quiz"
 									div.title= event.title
 									div= event.name
 				.col-1

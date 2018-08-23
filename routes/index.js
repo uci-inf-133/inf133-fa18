@@ -7,23 +7,23 @@ calendar.writeICS();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { });
+	res.render('index', { 'assignments_and_quizzes': calendar.getUpcomingAssignmentsAndQuizzes(3), 'lectures': calendar.getRecentLectures(5) });
 });
 
 router.get('/assignments', function(req, res, next) {
-  res.render('assignments', { });
+	res.render('assignments', { });
 });
 
 router.get('/resources', function(req, res, next) {
-  res.render('resources', { });
+	res.render('resources', { });
 });
 
 router.get('/syllabus', function(req, res, next) {
-  res.render('syllabus', { });
+	res.render('syllabus', { });
 });
 
 router.get('/calendar', function(req, res, next) {
-  res.render('calendar', { 'calendar': calendar.loadCalendarData() });
+	res.render('calendar', { 'calendar': calendar.getCalendarData() });
 });
 
 module.exports = router;
