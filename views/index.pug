@@ -10,7 +10,11 @@ block content
         p Email: TBD
         h2 Upcoming Assignments and Quizzes
         each event in assignments_and_quizzes
-            p=event.date + ': ' + event.name
+            if 'link' in event
+                p
+                    a(href=event.link)=event.date + ': ' + event.name
+            else
+                p=event.date + ': ' + event.name
         if assignments_and_quizzes.length == 0
             p No more!
         h2 Recent Lectures

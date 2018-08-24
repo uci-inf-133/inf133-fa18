@@ -37,7 +37,7 @@
 			]
 		},
 		"assignment" : {
-			"due": "4:00"
+			"due": "04:00"
 		},
 		"quiz" : {
 			"due": "21:00"
@@ -58,7 +58,8 @@
 			"date": "2018-10-01",
 			"type": "assignment",
 			"title": "A0",
-			"name": "Getting to Know You, Getting to Know Us"
+			"name": "Getting to Know You, Getting to Know Us",
+			"link": "/assignments/a0"
 		},
 		{
 			"date": "2018-10-02",

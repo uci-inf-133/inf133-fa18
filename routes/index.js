@@ -11,7 +11,16 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/assignments', function(req, res, next) {
-	res.render('assignments', { });
+	res.render('assignments', { 'assignments': calendar.getAllAssignments() });
+});
+
+router.get('/assignments/:number', function(req, res, next) {
+	var assignments = calendar.getAssignment(req.params.number);
+	if(assignment) {
+		res.render('assignments/' + assignment.title, {'assignment' : assignment});
+	} else {
+		throw new Error("No assignment with that name");
+	}
 });
 
 router.get('/resources', function(req, res, next) {

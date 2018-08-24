@@ -59,6 +59,9 @@ exports.getCalendarData = () => {
 				if("name" in event) {
 					eventsToPush[i].name = event.name;
 				}
+				if("link" in event) {
+					eventsToPush[i].link = event.link;
+				}
 			});
 			calendar_dates[calendarI].events = calendar_dates[calendarI].events.concat(eventsToPush);
 			eventI++;
@@ -80,33 +83,80 @@ exports.getCalendarData = () => {
 	return calendar_weeks;
 }
 
+exports.getAssignment = (assignmentName) => {
+	var calendar_data = fs.readJsonSync('public/calendar.json');
+	assignment = calendar_data.events.find(event => {
+		return event.type == 'assignment' && event.title.toLowerCase() == assignmentName.toLowerCase();
+	});
+	if(!assignment) {
+		return undefined;
+	} else {
+		due_date = moment(assignment.date + " " + calendar_data.defaults.assignment.due);
+		due_date.add(1, 'days');
+		assignment_formatted = {
+			'due': moment(due_date).format('dddd, MMMM Do, h:mma'),
+			'title': assignment.title,
+			'name': assignment.name
+		};
+		if('link' in assignment) {
+			assignment_formatted.link = assignment.link;
+		}
+		return assignment_formatted;
+	}
+}
+
+exports.getAllAssignments = () => {
+	var calendar_data = fs.readJsonSync('public/calendar.json');
+	return calendar_data.events.filter(event => {
+		return event.type == 'assignment';
+	}).sort((a, b) => { //Sort ascending
+		return moment(a.date) - moment(b.date);
+	}).map(event => {
+		due_date = moment(event.date + " " + calendar_data.defaults.assignment.due);
+		due_date.add(1, 'days');
+		assignment = {
+			'due': moment(due_date).format('dddd, MMMM Do, h:mma'),
+			'title': event.title,
+			'name': event.name
+		};
+		if('link' in event) {
+			assignment.link = event.link;
+		}
+		return assignment;
+	});
+}
+
 exports.getUpcomingAssignmentsAndQuizzes = (howMany) => {
 	var calendar_data = fs.readJsonSync('public/calendar.json');
-	upcoming_assignments_and_quizzes = calendar_data.events.filter(event => {
-		due_date = moment(event.date);
+	return calendar_data.events.filter(event => {
 		if(event.type == 'assignment') {
+			due_date = moment(event.date + " " + calendar_data.defaults.assignment.due);
 			due_date.add(1, 'days');
-			due_date.hour(calendar_data.defaults.assignment.due);
+			return moment() <= due_date;
 		} else if(event.type == 'quiz') {
-			due_date.hour(calendar_data.defaults.quiz.due);
+			due_date = moment(event.date + " " + calendar_data.defaults.quiz.due);
+			return moment() <= due_date;
 		} else {
 			return false;
 		}
-		return moment() <= due_date;
 	}).sort((a, b) => { //Sort ascending
 		return moment(a.date) - moment(b.date);
-	}).slice(0, howMany);
-	return upcoming_assignments_and_quizzes.map(event => {
-		return {
+	}).slice(0, howMany)
+	.map(event => {
+		assignment_or_quiz = {
 			'date': moment(event.date).format('ddd MMM D'),
 			'name': event.title + ' (' + event.name + ')'
 		};
+		if('link' in event) {
+			assignment_or_quiz.link = event.link;
+		}
+		return assignment_or_quiz;
 	});
 }
 
 exports.getRecentLectures = (howMany) => {
 	var calendar_data = fs.readJsonSync('public/calendar.json');
-	recent_lectures = calendar_data.events.filter(event => {
+	return calendar_data.events.filter(event => {
 		if(event.type != 'lecture') {
 			return false;
 		}
@@ -115,12 +165,16 @@ exports.getRecentLectures = (howMany) => {
 		return moment() >= moment(event.date);
 	}).sort((a, b) => { //Sort descending
 		return moment(b.date) - moment(a.date);
-	}).slice(0, howMany);
-	return recent_lectures.map(event => {
-		return {
+	}).slice(0, howMany)
+	.map(event => {
+		lecture = {
 			'date': moment(event.date).format('ddd MMM D'),
 			'name': event.title
 		};
+		if('link' in event) {
+			lecture.link = event.link;
+		}
+		return lecture;
 	});
 }
 
@@ -142,9 +196,8 @@ exports.writeICS = () => {
 				};
 			});
 		} else if(e.type == "assignment") {
-			var time = moment(e.date);
+			var time = moment(e.date + " " + calendar_data.defaults.assignment.due);
 			time.add(1, 'days');
-			time.hour(calendar_data.defaults.assignment.due);//set calendar event for due time
 			return {
 				"title": e.title + ": " + e.name,
 				"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],

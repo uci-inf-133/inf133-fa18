@@ -2,5 +2,11 @@ extends layout
 
 block content
 	main.container-fluid
-		h2 Assignments
-		p TBD
+		h1 Assignments
+		ul
+		each assignment in assignments
+			if 'link' in assignment
+				li
+					a(href=assignment.link)=assignment.title + ', ' + assignment.name + ' (Due ' + assignment.due + ')'
+			else
+				li= assignment.title + ', ' + assignment.name + ' (Due ' + assignment.due + ')'
