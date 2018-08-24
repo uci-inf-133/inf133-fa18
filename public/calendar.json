@@ -37,7 +37,10 @@
 			]
 		},
 		"assignment" : {
-
+			"due": "4:00"
+		},
+		"quiz" : {
+			"due": "21:00"
 		}
 	},
 	"events" : [

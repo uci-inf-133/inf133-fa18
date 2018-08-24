@@ -2,12 +2,6 @@ const ics = require('ics');
 const fs = require('fs-extra');
 var moment = require('moment');
 
-//This is bad practice! I should be getting all of these from the JSON file.
-//TODO: fix this later.
-var assignment_hour = 4; //4am
-var quiz_hour = 21; //9pm, after the last section
-var lecture_hour = 15; //3pm
-
 exports.getCalendarData = () => {
 	const typeOrder = ["holiday", "absence", "assignment", "quiz", "lecture", "discussion", "officehours_daniel"]
 	var calendar_data = fs.readJsonSync('public/calendar.json');
@@ -92,9 +86,9 @@ exports.getUpcomingAssignmentsAndQuizzes = (howMany) => {
 		due_date = moment(event.date);
 		if(event.type == 'assignment') {
 			due_date.add(1, 'days');
-			due_date.hour(assignment_hour);
+			due_date.hour(calendar_data.defaults.assignment.due);
 		} else if(event.type == 'quiz') {
-			due_date.hour(quiz_hour);
+			due_date.hour(calendar_data.defaults.quiz.due);
 		} else {
 			return false;
 		}
@@ -116,8 +110,8 @@ exports.getRecentLectures = (howMany) => {
 		if(event.type != 'lecture') {
 			return false;
 		}
-		lecture_time = moment(event.date);
-		lecture_time.hour(lecture_hour);
+		lecture_time = moment(event.date + " " + calendar_data.defaults.lecture.place[0].time);
+		lecture_time.add(calendar_data.defaults.lecture.place[0].duration, "minutes");
 		return moment() >= moment(event.date);
 	}).sort((a, b) => { //Sort descending
 		return moment(b.date) - moment(a.date);
@@ -150,7 +144,7 @@ exports.writeICS = () => {
 		} else if(e.type == "assignment") {
 			var time = moment(e.date);
 			time.add(1, 'days');
-			time.hour(assignment_hour);//set calendar event for 4am
+			time.hour(calendar_data.defaults.assignment.due);//set calendar event for due time
 			return {
 				"title": e.title + ": " + e.name,
 				"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
