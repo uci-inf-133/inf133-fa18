@@ -15,7 +15,7 @@ router.get('/assignments', function(req, res, next) {
 });
 
 router.get('/assignments/:number', function(req, res, next) {
-	var assignments = calendar.getAssignment(req.params.number);
+	var assignment = calendar.getAssignment(req.params.number);
 	if(assignment) {
 		res.render('assignments/' + assignment.title, {'assignment' : assignment});
 	} else {
