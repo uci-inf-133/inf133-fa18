@@ -163,6 +163,10 @@ cite > .notes {
 	font-size: 0.8em;
 }
 
+code {
+	color: var(--color-complement-0);
+}
+
 hr {
 	border-top: 1px solid #888;
 }
