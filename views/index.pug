@@ -20,7 +20,11 @@ block content
             p No more!
         h2 Recent Lectures
         each event in lectures
-            p=event.date + ': ' + event.name
+            if 'link' in event
+                p
+                    a(href=event.link)=event.date + ': ' + event.name
+            else
+                p=event.date + ': ' + event.name
         if lectures.length == 0
             p None yet!
     main.col-md-9.col-sm-12

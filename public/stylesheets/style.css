@@ -118,7 +118,7 @@ aside > h2 {
 }
 
 aside > p {
-	margin: 2px;
+	margin: 2px 2px 5px 2px;
 	font-size: 1.0em;
 }
 
@@ -195,14 +195,6 @@ blockquote {
 
 tbd {
 	color: var(--color-secondary-1-0);
-}
-
-.faded {
-	opacity: .5;
-}
-
-.spacing {
-	margin-bottom: 5px;
 }
 
 .emph {
