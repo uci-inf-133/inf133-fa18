@@ -2,24 +2,27 @@ extends ../layout
 
 block content
 	main.container-fluid
-		h1 A1: Portfolio in HTML and CSS
+		tbd Still in development
+		h1 A1: Responsive Portfolio in HTML and CSS
 		h3='Due ' + assignment.due
 		p In this assignment, you'll make yourself a basic portfolio online. Portfolios are useful for showing potential employers the skills you've picked up in coursework, internships, side projects, etc.
+		h2 Starter code
+		tbd TBD
 		h2 Requirements
 		p The requirements for your portfolio are intentionally flexible. We hope you embrace the assignment and make something of high enough quality to use as you search for internships or jobs.
 		p The page(s) you generate must pass three validation checks:
 		ol
-			li The HTML must be well-formed, as validated by 
+			li The HTML must be well-formed, validated by 
 				a(href="https://validator.w3.org/") W3C
 				| .
-			li The CSS must also be well-formed, as validated by 
+			li The CSS must also be well-formed, validated by 
 				a(href="https://jigsaw.w3.org/css-validator/") W3C
 				| .
-			li The page must pass accessibility guidelines, as validated by 
+			li The page must pass accessibility guidelines, validated by 
 				a(href="https://achecker.ca/checker/index.php") AChecker
 				|  and/or 
 				a(href="http://wave.webaim.org/") Wave
-				| .
+				|  (submit the AChecker validation, but perhaps try Wave too).
 		p The checkers vary in stringency. Aim to resolve all of the errors, but think through whether the warnings are actually problems.
 		p Beyond that, you must include basic HTML content (at least 3 of the following):
 		ul
@@ -31,20 +34,29 @@ block content
 				code aside
 				|  or 
 				code footer
+			li Adding custom icons from 
+				a(href="https://google.github.io/material-design-icons/") Google Material Icons
+				|  or 
+				a(href="https://fontawesome.com/") Font Awesome
 		p You must also include basic CSS styling (at least 2 of the following):
 		ul
 			li Modifying padding and margins
 			li Modifying link or text color
 			li Modifying width and height of various sections
-			li Loading custom font(s) from 
+			li Adding custom font(s) from 
 				a(href="https://fonts.google.com/") Google fonts
+				|  (make sure to include appropriate fallbacks)
 		p Finally, you must include at least 1 more advanced feature which goes beyond modifying text and block layouts, such as:
 		ul
 			li Creating a table with multiple columns and rows which can be read via a screen reader
 			li Creating a more complex page layout, such as including a sidebar
 			li Embedded HTML5 media, like video or audio, with fallbacks
 			li Leveraging nested selectors to specify format
-		p We're extremely open to other ideas. Contact the course staff if you have an idea which doesn't fall into one of the above categories, and we'll update the lists. Take this as an opportunity to be creative.
+		p We're extremely open to other ideas. Contact the course staff if you have an idea which doesn't fall into one of the above categories, and we'll update the lists. Take this as an opportunity to be creative. Feel free to build off online examples which use JavaScript or HTML or CSS tags that we didn't cover in lecture.
+		p If you've made yourself a portfolio for another class or as a side project, it may fill the requirements for this assignment. It must be made from scratch; it cannot be made using a site creator like Weebly, Wix, SquareSpace, etc. It also must pass the validation checks, and consider adding a feature or two to embrace the spirit of the assignment. Contact the course staff if you have questions about using a portfolio you've already made for this assignment.
+		p If your previous site fits the requirements, submit it as though you made it this quarter, but indicate in your 
+			code readme.txt
+			|  that you're submitting a portfolio you made before this course. Describe what you changed to pass the validation checks and any features you've added to enhance your portfolio.
 		h3 Submission
 		p Upload one 
 			code zip
@@ -68,21 +80,24 @@ block content
 				code readme.txt
 				|  document containing:
 				ul
+					li A list containing the basic HTML content, CSS styling, and advanced feature you included in your portfolio
 					li How long it took you to complete the assignment
 					li A list of urls of the online resources you consulted
 					li A list of classmates or other individuals you consulted
 		p Upload your files on Canvas: 
-			tbd TBD
+			tbd GitHub classroom may be sufficient?
 		p If you're proud of your portfolio, it's pretty easy to put it online! ICS gives all students space to post portfolios or other webpages. Follow the directions 
 			a(href="https://www.ics.uci.edu/computing/web/personalpage.php") here
-			|  to get your page online. You're not required to make your portfolio for this assignment, but we encourage you to consider it.
+			|  to get your page online. You're not required to make your portfolio public, but we encourage you to consider it.
 		h3 Grading
-		p This assignment will be graded on a scale of 10 points, broken down as follows:
-		ul
-			li Passes three validation checks (3 points, 1 for each check)
-			li Includes basic HTML content (2 points)
-			li Includes basic CSS styling (2 points)
-			li Includes an advanced feature (1 point)
-			li Embracing the spirit of the assignment (2 points)
+		p This assignment will be graded on a scale of 20 points, broken down as follows:
+		tbd
+			ul
+				li Includes basic HTML content (2 points)
+				li Includes basic CSS styling (2 points)
+				li Responsive layout (X points)
+				li Passes three validation checks (3 points, 1 for each check)
+				li Includes an advanced feature (1 point)
+				li Embracing the spirit of the assignment (2 points)
 		p Toward the last category, we hope you take this chance to make a portfolio you'd want to use beyond this assignment and will reward the students who embrace the opportunity the most. We therefore expect the median and mode for this category to be 1 point and will reserve the last point for particularly exceptional portfolios.
 		p In prior courses, you've been asked to follow good principles for indentation, naming variables, commenting, etc. We expect you to do the same in this course, but aim to avoid being draconian in our enforcement of these principles. Egrigously poor formatting, completely uncommented code, etc. may incur a small penalty (e.g., -1 point), but we expect this to be rarely applied.

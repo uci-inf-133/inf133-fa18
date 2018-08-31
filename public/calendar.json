@@ -81,10 +81,10 @@
 			"title": "Responsive Design"
 		},
 		{
-			"date": "2018-10-08",
+			"date": "2018-10-12",
 			"type": "assignment",
 			"title": "A1",
-			"name": "Portfolio in HTML and CSS",
+			"name": "Responsive Portfolio in HTML and CSS",
 			"link": "/assignments/a1"
 		},
 		{
@@ -116,12 +116,6 @@
 			"date": "2018-10-12",
 			"type": "lecture",
 			"title": "DOM Manipulation"
-		},
-		{
-			"date": "2018-10-15",
-			"type": "assignment",
-			"title": "A2",
-			"name": "Responsive Web"
 		},
 		{
 			"date": "2018-10-15",
@@ -175,7 +169,7 @@
 		{
 			"date": "2018-10-24",
 			"type": "assignment",
-			"title": "A3",
+			"title": "A2",
 			"name": "JavaScript & TypeScript"
 		},
 		{
@@ -250,7 +244,7 @@
 		{
 			"date": "2018-11-07",
 			"type": "assignment",
-			"title": "A4",
+			"title": "A3",
 			"name": "Angular"
 		},
 		{
@@ -314,7 +308,7 @@
 		{
 			"date": "2018-11-21",
 			"type": "assignment",
-			"title": "A5",
+			"title": "A4",
 			"name": "Ionic"
 		},
 		{
@@ -384,7 +378,7 @@
 		{
 			"date": "2018-12-10",
 			"type": "assignment",
-			"title": "A6",
+			"title": "A5",
 			"name": "Databases & Sensing"
 		}
 	]

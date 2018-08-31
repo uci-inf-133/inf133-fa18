@@ -17,7 +17,7 @@ router.get('/assignments', function(req, res, next) {
 router.get('/assignments/:number', function(req, res, next) {
 	var assignment = calendar.getAssignment(req.params.number);
 	if(assignment) {
-		res.render('assignments/' + assignment.title, {'assignment' : assignment});
+		res.render('assignments/' + assignment.title.toLowerCase(), {'assignment' : assignment});
 	} else {
 		throw new Error("No assignment with that name");
 	}
