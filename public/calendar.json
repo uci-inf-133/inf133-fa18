@@ -29,7 +29,7 @@
 		"officehours_daniel": {
 			"place": [
 				{
-					"time": "16:00",
+					"time": "15:00",
 					"duration": "60",
 					"location": "DBH 6093",
 					"label": "Daniel Office Hour"
@@ -47,7 +47,7 @@
 		{
 			"date": "2018-09-28",
 			"type": "lecture",
-			"title": "Introduction & Human Perception"
+			"title": "Introduction & History"
 		},
 		{
 			"date": "2018-10-01",
