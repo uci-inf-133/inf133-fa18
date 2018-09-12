@@ -6,12 +6,11 @@ block content
 		p Subscription link: 
 			a(href="/calendar.ics") inf133-fa18.depstein.net/calendar.ics
 		p
-			tbd All syllabus content is subject to change, particularly prior to the start of the quarter.
+			tbd All deadlines are subject to change, particularly prior to the start of the quarter.
 		each week in calendar
 			.row.row-eq-height
-				.col-1
 				each day in week
-					.col-2.day
+					div(class='day' + (day.weekend ? ' col' : ' col-2') + (day.today ? ' today' : ''))
 						div= day.date_str
 						each event in day.events
 							div(class='event ' + event.type)
@@ -37,4 +36,3 @@ block content
 								else if event.type == "quiz"
 									div.title= event.title
 									div= event.name
-				.col-1

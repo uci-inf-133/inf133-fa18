@@ -21,6 +21,8 @@ exports.getCalendarData = () => {
 			"date": calendar_start_date.date(),
 			"weekday": calendar_start_date.weekday(),
 			"date_str": calendar_start_date.format("MMM D"),
+			"today": calendar_start_date.isSame(moment(), 'day'),
+			"weekend": calendar_start_date.day() == 0 || calendar_start_date.day() == 6, //Saturday or Sunday
 			"events": []
 		});
 		calendar_start_date.add(1, "days");
@@ -73,13 +75,11 @@ exports.getCalendarData = () => {
 			calendarI++;
 		}
 	}
-	//Group events by week
 	calendar_weeks = [];
 	while(calendar_dates.length > 0) {
-		calendar_weeks.push(calendar_dates.slice(1, 6)); //Strip out weekends
+		calendar_weeks.push(calendar_dates.slice(0, 7));
 		calendar_dates = calendar_dates.slice(7);
 	}
-
 	return calendar_weeks;
 }
 

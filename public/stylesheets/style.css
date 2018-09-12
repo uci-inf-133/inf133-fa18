@@ -215,6 +215,10 @@ tbd {
 	margin: 1px;
 }
 
+.today {
+	background-color: var(--color-primary-1);
+}
+
 .event {
 	margin: 2px;
 	padding: 4px;
