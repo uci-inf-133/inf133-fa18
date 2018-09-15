@@ -30,9 +30,9 @@
 			"place": [
 				{
 					"time": "15:00",
-					"duration": "60",
+					"duration": "120",
 					"location": "DBH 6093",
-					"label": "Daniel Office Hour"
+					"label": "Professor Epstein Office Hour"
 				}
 			]
 		},
@@ -302,8 +302,8 @@
 		},
 		{
 			"date": "2018-11-21",
-			"type": "lecture",
-			"title": "Topic TBD"
+			"type": "holiday",
+			"title": "Thanksgiving Travel, Class Canceled"
 		},
 		{
 			"date": "2018-11-21",
