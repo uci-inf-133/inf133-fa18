@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 var moment = require('moment');
 
 exports.getCalendarData = () => {
-	const typeOrder = ["holiday", "absence", "assignment", "quiz", "lecture", "discussion", "officehours_daniel"]
+	const typeOrder = ["holiday", "absence", "assignment", "quiz", "lecture", "discussion", "officehours_daniel", "officehours_jamshir", "officehours_simion"]
 	var calendar_data = fs.readJsonSync('public/calendar.json');
 	//Sort calendar events
 	calendar_data.events.sort((a, b) => {

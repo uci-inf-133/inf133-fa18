@@ -32,7 +32,27 @@
 					"time": "15:00",
 					"duration": "120",
 					"location": "DBH 6093",
-					"label": "Professor Epstein Office Hour"
+					"label": "Professor Epstein Office Hours"
+				}
+			]
+		},
+		"officehours_jamshir": {
+			"place": [
+				{
+					"time": "17:00",
+					"duration": "120",
+					"location": "TBD",
+					"label": "Jamshir Office Hours"
+				}
+			]
+		},
+		"officehours_simion": {
+			"place": [
+				{
+					"time": "15:00",
+					"duration": "120",
+					"location": "TBD",
+					"label": "Simion Office Hours"
 				}
 			]
 		},
@@ -62,6 +82,10 @@
 			"link": "/assignments/a0"
 		},
 		{
+			"date": "2018-10-01",
+			"type": "officehours_jamshir"
+		},
+		{
 			"date": "2018-10-02",
 			"type": "discussion",
 			"title": "Discussion"
@@ -81,16 +105,17 @@
 			"title": "Responsive Design"
 		},
 		{
-			"date": "2018-10-12",
-			"type": "assignment",
-			"title": "A1",
-			"name": "Responsive Portfolio in HTML and CSS",
-			"link": "/assignments/a1"
+			"date": "2018-10-05",
+			"type": "officehours_simion"
 		},
 		{
 			"date": "2018-10-08",
 			"type": "lecture",
 			"title": "Bootstrap"
+		},
+		{
+			"date": "2018-10-08",
+			"type": "officehours_jamshir"
 		},
 		{
 			"date": "2018-10-09",
@@ -114,6 +139,17 @@
 		},
 		{
 			"date": "2018-10-12",
+			"type": "assignment",
+			"title": "A1",
+			"name": "Responsive Portfolio in HTML and CSS",
+			"link": "/assignments/a1"
+		},
+		{
+			"date": "2018-10-12",
+			"type": "officehours_simion"
+		},
+		{
+			"date": "2018-10-12",
 			"type": "lecture",
 			"title": "DOM Manipulation"
 		},
@@ -121,6 +157,10 @@
 			"date": "2018-10-15",
 			"type": "lecture",
 			"title": "JSON & Time"
+		},
+		{
+			"date": "2018-10-15",
+			"type": "officehours_jamshir"
 		},
 		{
 			"date": "2018-10-16",
@@ -142,9 +182,17 @@
 			"title": "AJAX, Fetch, & Promises"
 		},
 		{
+			"date": "2018-10-19",
+			"type": "officehours_simion"
+		},
+		{
 			"date": "2018-10-22",
 			"type": "lecture",
 			"title": "Separation in Angular"
+		},
+		{
+			"date": "2018-10-22",
+			"type": "officehours_jamshir"
 		},
 		{
 			"date": "2018-10-23",
@@ -178,9 +226,17 @@
 			"title": "HTTP Requests & Security"
 		},
 		{
+			"date": "2018-10-26",
+			"type": "officehours_simion"
+		},
+		{
 			"date": "2018-10-29",
 			"type": "lecture",
 			"title": "Libraries & OAuth"
+		},
+		{
+			"date": "2018-10-29",
+			"type": "officehours_jamshir"
 		},
 		{
 			"date": "2018-10-30",
@@ -206,9 +262,17 @@
 			"type": "officehours_daniel"
 		},
 		{
+			"date": "2018-11-02",
+			"type": "officehours_simion"
+		},
+		{
 			"date": "2018-11-05",
 			"type": "lecture",
 			"title": "Topic TBD"
+		},
+		{
+			"date": "2018-11-05",
+			"type": "officehours_jamshir"
 		},
 		{
 			"date": "2018-11-05",
@@ -257,6 +321,10 @@
 			"type": "officehours_daniel"
 		},
 		{
+			"date": "2018-11-09",
+			"type": "officehours_simion"
+		},
+		{
 			"date": "2018-11-12",
 			"type": "holiday",
 			"title": "Veteran's Day (Observed)"
@@ -281,6 +349,10 @@
 			"title": "Device Resources"
 		},
 		{
+			"date": "2018-11-16",
+			"type": "officehours_simion"
+		},
+		{
 			"date": "2018-11-19",
 			"type": "lecture",
 			"title": "Device Sensors"
@@ -288,6 +360,10 @@
 		{
 			"date": "2018-11-19",
 			"type": "officehours_daniel"
+		},
+		{
+			"date": "2018-11-19",
+			"type": "officehours_jamshir"
 		},
 		{
 			"date": "2018-11-20",
@@ -327,6 +403,10 @@
 			"title": "Analytics & Telemetry"
 		},
 		{
+			"date": "2018-11-26",
+			"type": "officehours_jamshir"
+		},
+		{
 			"date": "2018-11-27",
 			"type": "discussion",
 			"title": "Discussion"
@@ -346,9 +426,17 @@
 			"title": "Wearables"
 		},
 		{
+			"date": "2018-11-30",
+			"type": "officehours_simion"
+		},
+		{
 			"date": "2018-12-03",
 			"type": "lecture",
 			"title": "Augmented & Virtual Reality"
+		},
+		{
+			"date": "2018-12-03",
+			"type": "officehours_jamshir"
 		},
 		{
 			"date": "2018-12-04",
@@ -374,6 +462,10 @@
 			"date": "2018-12-07",
 			"type": "lecture",
 			"title": "Wrap-Up"
+		},
+		{
+			"date": "2018-12-07",
+			"type": "officehours_simion"
 		},
 		{
 			"date": "2018-12-10",

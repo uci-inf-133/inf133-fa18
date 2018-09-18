@@ -21,7 +21,7 @@ block content
 									else
 										div.title= event.title
 									div= event.time_str + ' | ' + event.location
-								else if event.type == "officehours_daniel"
+								else if event.type == "officehours_daniel" || event.type == "officehours_jamshir" || event.type == "officehours_simion"
 									div.title= event.label
 									div= event.time_str + ' | ' + event.location
 								else if event.type == "holiday" || event.type == "absence"
