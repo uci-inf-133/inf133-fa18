@@ -1,4 +1,4 @@
-const ics = require('ics');
+const ical = require('ical-generator');
 const fs = require('fs-extra');
 var moment = require('moment');
 
@@ -189,9 +189,9 @@ exports.writeICS = () => {
 					title += ": " + e.title
 				}
 				return {
-					"title": title,
-					"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
-					"duration": {minutes: l.duration},
+					"summary": title,
+					"start": time,
+					"end": moment(time).add(l.duration, 'minutes'),
 					"location": l.location
 				};
 			});
@@ -199,33 +199,32 @@ exports.writeICS = () => {
 			var time = moment(e.date + " " + calendar_data.defaults.assignment.due);
 			time.add(1, 'days');
 			return {
-				"title": e.title + ": " + e.name,
-				"start": [time.year(), time.month() + 1, time.date(), time.hour(), time.minute()],
-				"duration": {minutes: 60}
+				"summary": e.title + ": " + e.name,
+				"start": time,
+				"end": moment(time).add(60, 'minutes')
 			}
 		}
 		else if(e.type == "quiz") {
 			var time = moment(e.date);
 			return {
-				"title": e.title + ": " +e.name,
-				"start": [time.year(), time.month() + 1, time.date()],
-				"duration": {days: 1}
+				"summary": e.title + ": " +e.name,
+				"start": time,
+				"allDay": true
 			}
 		} else {
 			var time = moment(e.date);
 			return {
-				"title": e.title,
-				"start": [time.year(), time.month() + 1, time.date()],
-				"duration": {days: 1}
+				"summary": e.title,
+				"start": time,
+				"allDay": true
 			}
 		}
 	}));
 
-	ics.createEvents(ics_events, (error, value) => {
-		if(error) {
-			console.log(error);
-		} else {
-			fs.writeFileSync('public/calendar.ics', value);
-		}
+	var cal = ical({domain:'depstein.net', prodId: {company: 'University of California, Irvine Department of Informatics', product: 'IN4MATX 133 fall 2018', timezone:'America/Los_Angeles'}}).ttl(60*60*24);
+	ics_events.forEach((event) => {
+		cal.createEvent(event);
 	});
+
+	cal.saveSync('public/calendar.ics');
 }
