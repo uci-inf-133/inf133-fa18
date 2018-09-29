@@ -3,14 +3,14 @@ Repository for UC Irvine Informatics Course 133, User Interaction Software, Fall
 This will continue to be updated over the course of the quarter.
 Keep checking the [course website](http://inf133-fa18.depstein.net).
 
-##Contributing
+## Contributing
 Small issues, like typos in assignments, can perhaps be corrected with GitHub's inline editor.
 To edit, click on the "edit" button (pencil icon) in the appropriate file.
 This will create a new branch of the repository in your name and generate a pull request for the course staff to review.
 
 Larger edits, like feature additions, will require cloning the repository and running the website locally.
 
-###Running the website locally
+### Running the website locally
 
 This page was built with [NodeJS](https://nodejs.org/en/).
 Download Node before continuing and clone the repository.

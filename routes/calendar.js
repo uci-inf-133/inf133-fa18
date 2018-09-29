@@ -64,6 +64,9 @@ exports.getCalendarData = () => {
 				if("link" in event) {
 					eventsToPush[i].link = event.link;
 				}
+				if("recording" in event) {
+					eventsToPush[i].recording = event.recording;
+				}
 			});
 			calendar_dates[calendarI].events = calendar_dates[calendarI].events.concat(eventsToPush);
 			eventI++;
@@ -173,6 +176,9 @@ exports.getRecentLectures = (howMany) => {
 		};
 		if('link' in event) {
 			lecture.link = event.link;
+		}
+		if('recording' in event) {
+			lecture.recording = event.recording;
 		}
 		return lecture;
 	});
