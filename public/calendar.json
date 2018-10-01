@@ -41,7 +41,7 @@
 				{
 					"time": "17:00",
 					"duration": "120",
-					"location": "TBD",
+					"location": "ICS 440",
 					"label": "Jamshir Office Hours"
 				}
 			]
@@ -51,7 +51,7 @@
 				{
 					"time": "15:00",
 					"duration": "120",
-					"location": "TBD",
+					"location": "ICS 440",
 					"label": "Simion Office Hours"
 				}
 			]
@@ -74,7 +74,9 @@
 		{
 			"date": "2018-10-01",
 			"type": "lecture",
-			"title": "HTML & Accessibility"
+			"title": "HTML & Accessibility",
+			"link": "files/lectures/10_01_18-html_accessibility.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=231465&node=1035851&a=961207169&autoplay=1"
 		},
 		{
 			"date": "2018-10-01",
