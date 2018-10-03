@@ -94,7 +94,8 @@
 			"date": "2018-10-03",
 			"type": "lecture",
 			"title": "CSS",
-			"link": "files/lectures/10_03_18-css.pdf"
+			"link": "files/lectures/10_03_18-css.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=233940&node=1046004&a=341489129&autoplay=1"
 		},
 		{
 			"date": "2018-10-03",
@@ -103,7 +104,8 @@
 		{
 			"date": "2018-10-05",
 			"type": "lecture",
-			"title": "Responsive Design"
+			"title": "Responsive Design & Bootstrap",
+			"link": "files/lectures/10_05_18-responsive_design.pdf"
 		},
 		{
 			"date": "2018-10-05",
@@ -112,7 +114,7 @@
 		{
 			"date": "2018-10-08",
 			"type": "lecture",
-			"title": "Bootstrap"
+			"title": "JavaScript"
 		},
 		{
 			"date": "2018-10-08",
@@ -132,7 +134,7 @@
 		{
 			"date": "2018-10-10",
 			"type": "lecture",
-			"title": "JavaScript & TypeScript"
+			"title": "DOM Manipulation"
 		},
 		{
 			"date": "2018-10-10",
@@ -152,12 +154,12 @@
 		{
 			"date": "2018-10-12",
 			"type": "lecture",
-			"title": "DOM Manipulation"
+			"title": "TypeScript"
 		},
 		{
 			"date": "2018-10-15",
 			"type": "lecture",
-			"title": "JSON & Time"
+			"title": "Package Management & Time"
 		},
 		{
 			"date": "2018-10-15",
