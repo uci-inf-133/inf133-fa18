@@ -116,7 +116,8 @@
 			"date": "2018-10-08",
 			"type": "lecture",
 			"title": "JavaScript",
-			"link": "files/lectures/10_08_18-javascript.pdf"
+			"link": "files/lectures/10_08_18-javascript.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=237460&node=1060385&a=493389467&autoplay=1"
 		},
 		{
 			"date": "2018-10-08",
@@ -136,7 +137,8 @@
 		{
 			"date": "2018-10-10",
 			"type": "lecture",
-			"title": "DOM Manipulation"
+			"title": "DOM Manipulation",
+			"link": "files/lectures/10_10_18-dom_manipulation.pdf"
 		},
 		{
 			"date": "2018-10-10",
@@ -156,12 +158,12 @@
 		{
 			"date": "2018-10-12",
 			"type": "lecture",
-			"title": "TypeScript"
+			"title": "Package Management & TypeScript"
 		},
 		{
 			"date": "2018-10-15",
 			"type": "lecture",
-			"title": "Package Management & Time"
+			"title": "Data Visualization Libraries"
 		},
 		{
 			"date": "2018-10-15",
@@ -175,7 +177,7 @@
 		{
 			"date": "2018-10-17",
 			"type": "lecture",
-			"title": "Asynchronous Input"
+			"title": "AJAX, Fetch, & Promises"
 		},
 		{
 			"date": "2018-10-17",
@@ -184,7 +186,7 @@
 		{
 			"date": "2018-10-19",
 			"type": "lecture",
-			"title": "AJAX, Fetch, & Promises"
+			"title": "Server-Side Development"
 		},
 		{
 			"date": "2018-10-19",
