@@ -138,7 +138,8 @@
 			"date": "2018-10-10",
 			"type": "lecture",
 			"title": "DOM Manipulation",
-			"link": "files/lectures/10_10_18-dom_manipulation.pdf"
+			"link": "files/lectures/10_10_18-dom_manipulation.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=239433&node=1067264&a=928630031&autoplay=1"
 		},
 		{
 			"date": "2018-10-10",
@@ -158,12 +159,14 @@
 		{
 			"date": "2018-10-12",
 			"type": "lecture",
-			"title": "Package Management & TypeScript"
+			"title": "Package Management & TypeScript",
+			"link": "files/lectures/10_12_18-package_management_typescript.pdf"
 		},
 		{
 			"date": "2018-10-15",
 			"type": "lecture",
-			"title": "Data Visualization Libraries"
+			"title": "Data Visualization Tools",
+			"link": "files/lectures/10_15_18-data_visualization_tools.pdf"
 		},
 		{
 			"date": "2018-10-15",
@@ -210,7 +213,7 @@
 			"date": "2018-10-23",
 			"type": "quiz",
 			"title": "Quiz",
-			"name": "Asynchronous JavaScript & Data Formats"
+			"name": "Web Programming"
 		},
 		{
 			"date": "2018-10-24",
@@ -225,7 +228,8 @@
 			"date": "2018-10-24",
 			"type": "assignment",
 			"title": "A2",
-			"name": "JavaScript & TypeScript"
+			"name": "Runkeeper Tweet Report in JavaScript and TypeScript",
+			"link": "/assignments/a2"
 		},
 		{
 			"date": "2018-10-26",
