@@ -104,7 +104,7 @@ block content
 		p You will need to install a TypeScript transpiler and a Twitter Proxy for this assignment. The TypeScript transpiler converts TypeScript files to equivalent JavaScript. Like many APIs, Twitter doesn’t support making API requests on a client browser, so the Twitter Proxy creates a server running on your local computer at port 7890. The next assignment will explore how to make a server, but it’s not the focus of this assignment. It's also recommended that you install a live reloader to simplify debugging.
 		p The easiest way to install these two packages is through npm, the Package Manager in Node.js. Follow these instructions to install npm: 
 			a(href="https://www.npmjs.com/get-npm") https://www.npmjs.com/get-npm
-		p Once npm is installed, open your favorite terminal and install the two packages for the assignment. Both are applications which run in the terminal rather than libraries, so it’s recommended that you install them with the -g (global) option.
+		p Once npm is installed, open your favorite terminal and install the three packages for the assignment. Both are applications which run in the terminal rather than libraries, so it’s recommended that you install them with the -g (global) option.
 		ul
 			li Twitter Proxy: 
 				a(href="https://www.npmjs.com/package/twitter-proxy") https://www.npmjs.com/package/twitter-proxy
@@ -129,8 +129,15 @@ block content
 			code js/tweet.js
 			| .
 		h4 Running the Twitter Proxy
-		p First create a development application using the Twitter API before running the Twitter Proxy at 
-			a(href="https://developer.twitter.com/") https://developer.twitter.com/
+		p The Twitter developer account and Proxy is only required for the 
+			strong last
+			|  of the four parts of the assignment 
+			a(href="#live_tweets") (Loading Live Tweets)
+			| . It's good to create a development account and app sooner, in case they take some time to get approved. But setting it up and making API requests is not required to complete the first 75% of the assignment.
+		p First create a development account on Twitter.
+			a(href="https://developer.twitter.com/en/apply/user") https://developer.twitter.com/en/apply/user
+			| . Once your development account is approved, you can make a development application. 
+			a(href="https://developer.twitter.com/en/apps") https://developer.twitter.com/en/apps
 			| . We’re only going to use the API to read tweets, so some of the required parameters aren’t applicable. Name the app whatever you’d like. For the 
 			em Application Description
 			|  and 
@@ -152,10 +159,12 @@ block content
 		p Once this file is created, you can run your twitter proxy in the terminal from the same directory as your config file: 
 			code twitter-proxy twitter_proxy_config.json
 			| . This will enable you to access the Twitter API by swapping 
-			code https://api.twitter.com/1.1/
+			code https://api.twitter.com/
 			|  in all API requests with the proxy, 
 			code localhost:7890/
-			| .
+			| . Make sure to keep the 1.1 in the 
+			code localhost
+			|  url.
 		h4 Running Live Server
 		p You may find the live-server package helpful, which automatically refreshes your webpage when you make changes to it. It’s not perfect, but can be a helpful resource. Run it in your terminal from the root directory with 
 			code live-server
@@ -265,7 +274,7 @@ block content
 		video(width="600" autoplay muted loop)
 			source(src="../files/assignments/a2_search.mp4" type="video/mp4")
 			Toggling between the two visualizations.
-		h3 Loading Live Tweets (get_live_tweets.js and live_button_handler.js)
+		h3(id="live_tweets") Loading Live Tweets (get_live_tweets.js and live_button_handler.js)
 		p In this part, you will use JavaScript’s 
 			a(href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch") fetch API
 			|  to scrape the latest Tweets with the RunKeeper hashtag. You may use other APIs instead, so long as the function returns a Promise.
