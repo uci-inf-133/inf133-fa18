@@ -182,7 +182,8 @@
 		{
 			"date": "2018-10-17",
 			"type": "lecture",
-			"title": "AJAX, Fetch, & Promises"
+			"title": "AJAX, Fetch, & Promises",
+			"link": "files/lectures/10_17_18-ajax_fetch_promises.pdf"
 		},
 		{
 			"date": "2018-10-17",
