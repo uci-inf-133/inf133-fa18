@@ -43,7 +43,13 @@ exports.getCalendarData = () => {
 			if(event.type in calendar_data.defaults && "place" in calendar_data.defaults[event.type]) {
 				eventsToPush = calendar_data.defaults[event.type]["place"].map((place) => {
 					var start_time = moment(event.date + " " + place.time);
+					if("time" in event) {
+						start_time = moment(event.date + " " + event.time);
+					}
 					var end_time = moment(start_time).add(place.duration, "minutes");
+					if("duration" in event) {
+						end_time = moment(start_time).add(event.duration, "minutes");
+					}
 					return {
 						"time_str": start_time.format("h:mm") + "-" + end_time.format("h:mm"),
 						"location": place.location,
@@ -66,6 +72,9 @@ exports.getCalendarData = () => {
 				}
 				if("recording" in event) {
 					eventsToPush[i].recording = event.recording;
+				}
+				if("location" in event) {
+					eventsToPush[i].location = event.location;
 				}
 			});
 			calendar_dates[calendarI].events = calendar_dates[calendarI].events.concat(eventsToPush);

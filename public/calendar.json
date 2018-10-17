@@ -196,7 +196,8 @@
 		},
 		{
 			"date": "2018-10-19",
-			"type": "officehours_simion"
+			"type": "officehours_simion",
+			"location": "DBH 5222"
 		},
 		{
 			"date": "2018-10-22",
