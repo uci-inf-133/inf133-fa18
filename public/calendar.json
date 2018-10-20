@@ -205,7 +205,8 @@
 		{
 			"date": "2018-10-22",
 			"type": "lecture",
-			"title": "Server-Side JavaScript"
+			"title": "Server-Side Development",
+			"link": "files/lectures/10_22_18-server_side_development.pdf"
 		},
 		{
 			"date": "2018-10-22",
