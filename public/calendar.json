@@ -206,7 +206,8 @@
 			"date": "2018-10-22",
 			"type": "lecture",
 			"title": "Server-Side Development",
-			"link": "files/lectures/10_22_18-server_side_development.pdf"
+			"link": "files/lectures/10_22_18-server_side_development.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=245612&node=1091537&a=1216797812&autoplay=1"
 		},
 		{
 			"date": "2018-10-22",
@@ -226,14 +227,14 @@
 		{
 			"date": "2018-10-24",
 			"type": "lecture",
-			"title": "OAuth"
+			"title": "Authentication"
 		},
 		{
 			"date": "2018-10-24",
 			"type": "officehours_daniel"
 		},
 		{
-			"date": "2018-10-24",
+			"date": "2018-10-26",
 			"type": "assignment",
 			"title": "A2",
 			"name": "Runkeeper Tweet Report in JavaScript and TypeScript",
@@ -287,7 +288,7 @@
 		{
 			"date": "2018-11-05",
 			"type": "lecture",
-			"title": "Embodied interface design and play"
+			"title": "Embodied Interface Design and Play"
 		},
 		{
 			"date": "2018-11-05",
@@ -317,7 +318,7 @@
 		{
 			"date": "2018-11-07",
 			"type": "lecture",
-			"title": "Reducing design complexity"
+			"title": "Computing Within Limits"
 		},
 		{
 			"date": "2018-11-07",
