@@ -227,7 +227,8 @@
 		{
 			"date": "2018-10-24",
 			"type": "lecture",
-			"title": "Authentication"
+			"title": "Authentication and Authorization",
+			"link": "files/lectures/10_24_18-authentication_authorization.pdf"
 		},
 		{
 			"date": "2018-10-24",
