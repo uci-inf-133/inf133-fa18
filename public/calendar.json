@@ -245,7 +245,8 @@
 		{
 			"date": "2018-10-26",
 			"type": "lecture",
-			"title": "Separation in Angular"
+			"title": "Components in Angular",
+			"link": "files/lectures/10_26_18-angular_components.pdf"
 		},
 		{
 			"date": "2018-10-26",
@@ -254,7 +255,8 @@
 		{
 			"date": "2018-10-29",
 			"type": "lecture",
-			"title": "Components in Angular"
+			"title": "Separation in Angular",
+			"link": "files/lectures/10_29_18-angular_separation.pdf"
 		},
 		{
 			"date": "2018-10-29",
