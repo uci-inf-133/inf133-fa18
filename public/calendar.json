@@ -246,7 +246,8 @@
 			"date": "2018-10-26",
 			"type": "lecture",
 			"title": "Components in Angular",
-			"link": "files/lectures/10_26_18-angular_components.pdf"
+			"link": "files/lectures/10_26_18-angular_components.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=247791&node=1100163&a=1618255037&autoplay=1"
 		},
 		{
 			"date": "2018-10-26",
@@ -330,10 +331,11 @@
 			"title": "Daniel Away (CSCW), Guest Bill Tomlinson"
 		},
 		{
-			"date": "2018-11-07",
+			"date": "2018-11-09",
 			"type": "assignment",
 			"title": "A3",
-			"name": "Angular"
+			"name": "Spotify Browser in Angular and Express",
+			"link": "/assignments/a3"
 		},
 		{
 			"date": "2018-11-09",
