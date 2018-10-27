@@ -163,6 +163,11 @@ cite > .notes {
 	font-size: 0.8em;
 }
 
+img.maxwidth {
+	max-width: 100%;
+	display: block;
+}
+
 code {
 	color: var(--color-complement-0);
 }
