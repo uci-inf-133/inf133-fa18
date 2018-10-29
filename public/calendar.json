@@ -257,7 +257,8 @@
 			"date": "2018-10-29",
 			"type": "lecture",
 			"title": "Separation in Angular",
-			"link": "files/lectures/10_29_18-angular_separation.pdf"
+			"link": "files/lectures/10_29_18-angular_separation.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=248735&node=1103611&a=2095715088&autoplay=1"
 		},
 		{
 			"date": "2018-10-29",
@@ -284,10 +285,6 @@
 		},
 		{
 			"date": "2018-11-02",
-			"type": "officehours_daniel"
-		},
-		{
-			"date": "2018-11-02",
 			"type": "officehours_simion"
 		},
 		{
@@ -302,7 +299,7 @@
 		{
 			"date": "2018-11-05",
 			"type": "absence",
-			"title": "Daniel Away (CSCW), Guest Josh Tanenbaum"
+			"title": "Professor Epstein Away (CSCW), Guest Josh Tanenbaum"
 		},
 		{
 			"date": "2018-11-06",
@@ -312,13 +309,13 @@
 		{
 			"date": "2018-11-06",
 			"type": "absence",
-			"title": "Daniel Away (CSCW)"
+			"title": "Professor Epstein Away (CSCW)"
 		},
 		{
 			"date": "2018-11-06",
 			"type": "quiz",
 			"title": "Quiz",
-			"name": "HTTP Requests & Input Techniques"
+			"name": "Authentication, Angular, & Developing for Mobile"
 		},
 		{
 			"date": "2018-11-07",
@@ -328,7 +325,7 @@
 		{
 			"date": "2018-11-07",
 			"type": "absence",
-			"title": "Daniel Away (CSCW), Guest Bill Tomlinson"
+			"title": "Professor Epstein Away (CSCW), Guest Bill Tomlinson"
 		},
 		{
 			"date": "2018-11-09",
@@ -344,7 +341,8 @@
 		},
 		{
 			"date": "2018-11-09",
-			"type": "officehours_daniel"
+			"type": "officehours_daniel",
+			"time": "09:00"
 		},
 		{
 			"date": "2018-11-09",
