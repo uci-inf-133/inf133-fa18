@@ -94,7 +94,7 @@ block content
 					|  file, none in the 
 					code .service.spec.ts
 					|  file.
-				li One of the five classes in the 
+				li One of the six classes in the 
 					code data
 					|  folder: 
 					code track-features.ts
@@ -119,6 +119,9 @@ block content
 			|  into each respective project's folder and install the dependencies with 
 			code npm install
 			| .
+		p When installing, if you run into issues which look like "permission denied, try changing 
+			a(href="https://github.com/angular/angular-cli/issues/6848#issuecomment-386120663") the permissions of the node_modules directory
+			| . If you are still having trouble, ask on Slack or talk to the course staff. It's important to try to get the setup working sooner rather than later, even if you do not plan on working on the assignment until close to the deadline.
 		h4 Running the webserver
 		p A Spotify Developer account is required to set up the Express webserver. Create a Spotify account or log in at 
 			a(href="https://developer.spotify.com/dashboard/") https://developer.spotify.com/dashboard/
@@ -227,13 +230,21 @@ block content
 		p It's easiest to debug this part of the assignment directly in the URL bar of the browser. To start the OAuth process, go to 
 			code http://localhost:8888/login
 			| . Once set up, this page will redirect you to Spotify's authorization endpoint and kick off the OAuth flow. Since Express is running server-side JavaScript, any logged messages will be sent to your operating system console (e.g., Terminal on Mac or Command Prompt on Windows) rather than the browser console.
+		p Once the oAuth flow is working, it can be started from the "login" button in the top-right of the Angular client. When the oAuth flow has completed, use 
+			code res.redirect()
+			|  in your express server to send the user back to the Angluar client (
+			code http://localhost:4200
+			| ).
 		h3 Spotify Browser Home Page
 		img.maxwidth(src='../files/assignments/a3_home.png')
-		p In this part, you will create a homepage to view some information about the logged in user's account. You will also create search requests to the Spotify API.
+		p In this part, you will create a homepage to view some information about the logged in user's account. You will also create search requests to the Spotify API. As you get started with Angular, it may be helpful to review the 
+			a(href="https://github.com/uci-inf-133/angular-demo-10-29") code from the demo 
+			| on October 29th or the 
+			a(href="https://uci.yuja.com/V/Video?v=248735&node=1103611&a=2095715088&autoplay=1") lecture recording.
 		p First, update the 
 			code sendRequestToExpress
-			|  function in the Spotify service to ask the Express webserver to make an API request to Spotify at the endpoint passed in. Then, create functions for each endpoint in the Express webserver. All of these functions should return Promises with the data the Express webserver returns.
-		p Once the endpoints have been created, edit the 
+			|  function in the Spotify service to ask the Express webserver to make an API request to Spotify at the endpoint passed in. The endpoints should then return the appropriate data type for each API call.
+		p Once API requests can be made via the Express server, edit the 
 			code about
 			|  component to call the endpoint created for the "about me" page when the load info button is clicked. To do so, you will need to inject the Spotify service you just edited. The 
 			a(href="https://developer.spotify.com/documentation/web-api/reference/") Spotify API endpoint reference
