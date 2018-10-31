@@ -272,7 +272,8 @@
 		{
 			"date": "2018-10-31",
 			"type": "lecture",
-			"title": "Beyond Mouse & Keyboard"
+			"title": "Modeling Human Performance",
+			"link": "files/lectures/10_31_18-human_performance.pdf"
 		},
 		{
 			"date": "2018-10-31",
@@ -281,7 +282,7 @@
 		{
 			"date": "2018-11-02",
 			"type": "lecture",
-			"title": "SASS & Mobile UI Components"
+			"title": "Mobile Design Principles"
 		},
 		{
 			"date": "2018-11-02",
@@ -315,7 +316,7 @@
 			"date": "2018-11-06",
 			"type": "quiz",
 			"title": "Quiz",
-			"name": "Authentication, Angular, & Developing for Mobile"
+			"name": "Authentication, Angular, Touch"
 		},
 		{
 			"date": "2018-11-07",
@@ -361,7 +362,7 @@
 		{
 			"date": "2018-11-14",
 			"type": "lecture",
-			"title": "Databases"
+			"title": "SASS & Mobile UI Components"
 		},
 		{
 			"date": "2018-11-14",
@@ -370,7 +371,7 @@
 		{
 			"date": "2018-11-16",
 			"type": "lecture",
-			"title": "Device Resources"
+			"title": "Databases"
 		},
 		{
 			"date": "2018-11-16",
@@ -379,7 +380,7 @@
 		{
 			"date": "2018-11-19",
 			"type": "lecture",
-			"title": "Device Sensors"
+			"title": "Device Resources & Sensors"
 		},
 		{
 			"date": "2018-11-19",
@@ -406,7 +407,7 @@
 			"title": "Thanksgiving Travel, Class Canceled"
 		},
 		{
-			"date": "2018-11-21",
+			"date": "2018-11-26",
 			"type": "assignment",
 			"title": "A4",
 			"name": "Ionic"
