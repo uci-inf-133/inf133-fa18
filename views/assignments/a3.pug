@@ -104,6 +104,9 @@ block content
 			|  file in the root folder.
 		p This assignment can be completed without writing any additional files or functions. But you may add a file or function if you want (such as to complete one of the bonus features).
 		h3 Setting up your Workspace
+		p Some of the packages/libraries depend on newer versions of Node JS. If you installed Node JS before this class, make sure you've updated to at least 10, such as with 
+			a("https://github.com/creationix/nvm") nvm
+			| . If you installed Node during A2, you should not need to update.
 		p There are no global dependencies required to run the Express webserver.
 		p For the client, you will need to install Angular thourhg npm. To do this, you will install the Angular 
 			a(href="https://cli.angular.io/") Command Line Interface (CLI)
@@ -128,7 +131,11 @@ block content
 			|  and follow the instructions to create a client id. Name the app whatever you'd like. For the App description, enter:
 			blockquote This App is used to create a music browser as part of a course assignment for IN4MATX 133, User Interface Software, at the University of California, Irvine.
 			|  Indicate that you are building a Website and are not developing a commercial application.
-		p Once you have created your application, create a file, 
+		p Once you have created your application, create a file in the 
+			code webserver
+			| folder (not the 
+			code routes
+			|  folder), 
 			code client_secret.json
 			| , with your consumer key and secret. It should be of the form:
 			pre
@@ -136,7 +143,7 @@ block content
 				|  "client_id": "Your Client Key",
 				|  "client_secret": "Your Client Secret"
 				| } 
-		p At this time, also create a placeholder file for 
+		p At this time, also create a placeholder file in the same folder for 
 			code tokens.json
 			| . This file will later be overwritten once an access and refresh token have been retrieved. Your 
 			code tokens.json
@@ -230,6 +237,7 @@ block content
 		p It's easiest to debug this part of the assignment directly in the URL bar of the browser. To start the OAuth process, go to 
 			code http://localhost:8888/login
 			| . Once set up, this page will redirect you to Spotify's authorization endpoint and kick off the OAuth flow. Since Express is running server-side JavaScript, any logged messages will be sent to your operating system console (e.g., Terminal on Mac or Command Prompt on Windows) rather than the browser console.
+		p As you're debugging, you may encounter an error of the form "No default engine was specified and no extension was provided". This does not refer to an error in your oAuth code; all this means is that no webpage content was rendered. Keep looking in our oAuth code for other errors.
 		p Once the oAuth flow is working, it can be started from the "login" button in the top-right of the Angular client. When the oAuth flow has completed, use 
 			code res.redirect()
 			|  in your express server to send the user back to the Angluar client (
