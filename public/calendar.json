@@ -297,8 +297,9 @@
 			"title": "Embodied Interface Design and Play"
 		},
 		{
-			"date": "2018-11-05",
-			"type": "officehours_jamshir"
+			"date": "2018-11-06",
+			"type": "officehours_jamshir",
+			"time":"16:00"
 		},
 		{
 			"date": "2018-11-05",
@@ -328,6 +329,10 @@
 		},
 		{
 			"date": "2018-11-07",
+			"type": "officehours_simion"
+		},
+		{
+			"date": "2018-11-07",
 			"type": "absence",
 			"title": "Professor Epstein Away (CSCW), Guest Bill Tomlinson"
 		},
@@ -347,10 +352,6 @@
 			"date": "2018-11-09",
 			"type": "officehours_daniel",
 			"time": "09:00"
-		},
-		{
-			"date": "2018-11-09",
-			"type": "officehours_simion"
 		},
 		{
 			"date": "2018-11-12",
