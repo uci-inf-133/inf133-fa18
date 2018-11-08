@@ -338,7 +338,7 @@
 			"title": "Professor Epstein Away (CSCW), Guest Bill Tomlinson"
 		},
 		{
-			"date": "2018-11-09",
+			"date": "2018-11-13",
 			"type": "assignment",
 			"title": "A3",
 			"name": "Spotify Browser in Angular and Express",
@@ -370,8 +370,9 @@
 			"title": "SASS & Mobile UI Components"
 		},
 		{
-			"date": "2018-11-14",
-			"type": "officehours_daniel"
+			"date": "2018-11-13",
+			"type": "officehours_daniel",
+			"time": "11:00"
 		},
 		{
 			"date": "2018-11-16",
@@ -415,7 +416,7 @@
 			"date": "2018-11-26",
 			"type": "assignment",
 			"title": "A4",
-			"name": "Ionic"
+			"name": "Ionic (due date TBD)"
 		},
 		{
 			"date": "2018-11-22",
@@ -501,7 +502,7 @@
 			"date": "2018-12-10",
 			"type": "assignment",
 			"title": "A5",
-			"name": "Databases & Sensing"
+			"name": "Databases & Sensing (due date TBD)"
 		}
 	]
 }
