@@ -338,16 +338,10 @@
 			"title": "Professor Epstein Away (CSCW), Guest Bill Tomlinson"
 		},
 		{
-			"date": "2018-11-13",
-			"type": "assignment",
-			"title": "A3",
-			"name": "Spotify Browser in Angular and Express",
-			"link": "/assignments/a3"
-		},
-		{
 			"date": "2018-11-09",
 			"type": "lecture",
-			"title": "Hybrid & Native Architectures"
+			"title": "Hybrid & Native Architectures",
+			"link": "files/lectures/11_09_18-hybrid_development.pdf"
 		},
 		{
 			"date": "2018-11-09",
@@ -358,6 +352,13 @@
 			"date": "2018-11-12",
 			"type": "holiday",
 			"title": "Veteran's Day (Observed)"
+		},
+		{
+			"date": "2018-11-13",
+			"type": "assignment",
+			"title": "A3",
+			"name": "Spotify Browser in Angular and Express",
+			"link": "/assignments/a3"
 		},
 		{
 			"date": "2018-11-13",
