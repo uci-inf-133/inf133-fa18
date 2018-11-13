@@ -416,12 +416,6 @@
 			"title": "Thanksgiving Travel, Class Canceled"
 		},
 		{
-			"date": "2018-11-26",
-			"type": "assignment",
-			"title": "A4",
-			"name": "Ionic (due date TBD)"
-		},
-		{
 			"date": "2018-11-22",
 			"type": "holiday",
 			"title": "Thanksgiving"
@@ -449,6 +443,13 @@
 			"date": "2018-11-28",
 			"type": "lecture",
 			"title": "Testing"
+		},
+		{
+			"date": "2018-11-28",
+			"type": "assignment",
+			"title": "A4",
+			"name": "Sleep Tracker in Ionic",
+			"link": "/assignments/a4"
 		},
 		{
 			"date": "2018-11-28",
