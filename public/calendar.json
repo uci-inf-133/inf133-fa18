@@ -370,7 +370,8 @@
 		{
 			"date": "2018-11-14",
 			"type": "lecture",
-			"title": "SASS & Mobile UI Components"
+			"title": "Ionic Components",
+			"link": "files/lectures/11_14_18-ionic_components.pdf"
 		},
 		{
 			"date": "2018-11-13",
@@ -380,7 +381,7 @@
 		{
 			"date": "2018-11-16",
 			"type": "lecture",
-			"title": "Databases"
+			"title": "SASS"
 		},
 		{
 			"date": "2018-11-16",
@@ -408,7 +409,7 @@
 			"date": "2018-11-20",
 			"type": "quiz",
 			"title": "Quiz",
-			"name": "Research Topics & Architectures"
+			"name": "Research Topics & Mobile Development"
 		},
 		{
 			"date": "2018-11-21",
@@ -428,7 +429,7 @@
 		{
 			"date": "2018-11-26",
 			"type": "lecture",
-			"title": "Analytics & Telemetry"
+			"title": "Databases"
 		},
 		{
 			"date": "2018-11-26",
@@ -442,7 +443,7 @@
 		{
 			"date": "2018-11-28",
 			"type": "lecture",
-			"title": "Testing"
+			"title": "Analytics & Telemetry"
 		},
 		{
 			"date": "2018-11-28",
@@ -458,7 +459,7 @@
 		{
 			"date": "2018-11-30",
 			"type": "lecture",
-			"title": "Wearables"
+			"title": "Testing"
 		},
 		{
 			"date": "2018-11-30",
@@ -467,7 +468,7 @@
 		{
 			"date": "2018-12-03",
 			"type": "lecture",
-			"title": "Augmented & Virtual Reality"
+			"title": "Designing beyond Web and Mobile"
 		},
 		{
 			"date": "2018-12-03",
@@ -487,7 +488,7 @@
 		{
 			"date": "2018-12-05",
 			"type": "lecture",
-			"title": "Speech Interaction"
+			"title": "Wrap-up"
 		},
 		{
 			"date": "2018-12-05",
@@ -495,8 +496,8 @@
 		},
 		{
 			"date": "2018-12-07",
-			"type": "lecture",
-			"title": "Wrap-Up"
+			"type": "holiday",
+			"title": "Professor Epstein Away (CHI Committee Meeting), class canceled"
 		},
 		{
 			"date": "2018-12-07",
