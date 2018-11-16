@@ -39,6 +39,10 @@ block content
 					|  folder: 
 					code sleep.service
 					| . This service provides static variables for storing the logged data and a method for loading default (fake) data.
+		p You will likely want to create additional components, pages, or services to build your app. Running 
+			code ionic generate [filename]
+			|  will generate skeleton code for these files
+			a(href="https://ionicframework.com/docs/cli/generate/") (documentation here). The decision on how many pages, components, etc. to add and what they contain is up to you.
 		p There is also a 
 			code readme.txt
 			|  file in the root folder. The readme is more important to this assignment than to previous ones, as it is required to include justifications of your design choices.
@@ -116,13 +120,20 @@ block content
 		p The data file 
 			code overnight-sleep-data.ts
 			|  provides a starting point for logging this data. The fields can be changed, additional fields can be added, and helper methods can be added. So long as the questions of when someone went to bed and when they woke up can be logged and viewed in your app, you can change the fields however you wish. You can assume that a person logs overnight sleep only once per day.
+		p All data logged will be cleared when the app is restarted (such as when a change to the code is made). This is expected and allowed for this assignment. A5 will present an opportunity to save data to a database, which will allow data to persist when the app is restarted.
 		h3 Log Sleepiness During the Day
 		p Your app must allow someone to log how sleepy they feel throughout the day according to the 
 			a(href="https://web.stanford.edu/~dement/sss.html") Stanford Sleepiness Scale.
 			| At minimum, this means allowing a person to log how they felt on the scale's 1-7 rating system and when they felt this way. Again, it's up to you to decide how to log this data. Consider whether there are other things a person may want to log alongside their sleepiness. A person may log sleepiness more than once a day--in the morning before and after coffee, for example. This might impact how you support implementing the scale.
+		p Sleepiness throughout the day is often logged through 
+			a(href="https://en.wikipedia.org/wiki/Experience_sampling_method") Experience Sampling
+			| , a method in which someone is asked to log information about how they are feeling or what they are doing at multiple points over time. Technology can help facilitate experience sampling by providing a digital diary to log with. Technology can reduce the burden even further 
+			a(href="https://dl.acm.org/citation.cfm?id=2466140") by sending notifications
+			|  when it is time to journal. A5 will present an opportunity to add notifications to your app to invite someone to log their sleepiness.
 		p The data file 
 			code stanford-sleepiness-data.ts
 			|  provides a starting point, but you may change the fields or add new ones as you wish.
+		p Again, all data logged will be cleared when the app is restarted (such as when a change to the code is made). This is expected and allowed for this assignment.
 		h3 View Logged Data
 		p Your app must allow someone to view the overnight sleep and sleepiness data they have logged. These two types of data can be viewed together or separately. It is up to you to decide how the data should be presented. So long as a person's Overnight and Sleepiness data is visible in your app, you will get credit for the completion portion of A4.
 		h3 Readme
