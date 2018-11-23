@@ -508,10 +508,11 @@
 			"type": "officehours_simion"
 		},
 		{
-			"date": "2018-12-10",
+			"date": "2018-12-11",
 			"type": "assignment",
 			"title": "A5",
-			"name": "Databases & Sensing (due date TBD)"
+			"name": "Improved Sleep Tracker in Ionic",
+			"link": "/assignments/a5"
 		}
 	]
 }
