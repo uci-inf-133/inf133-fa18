@@ -433,7 +433,8 @@
 		{
 			"date": "2018-11-26",
 			"type": "lecture",
-			"title": "Databases"
+			"title": "Databases",
+			"link": "files/lectures/11_26_18-databases.pdf"
 		},
 		{
 			"date": "2018-11-26",
@@ -447,7 +448,7 @@
 		{
 			"date": "2018-11-28",
 			"type": "lecture",
-			"title": "Analytics & Telemetry"
+			"title": "Advanced CSS"
 		},
 		{
 			"date": "2018-11-28",
@@ -463,7 +464,7 @@
 		{
 			"date": "2018-11-30",
 			"type": "lecture",
-			"title": "Testing"
+			"title": "Designing for Wearables"
 		},
 		{
 			"date": "2018-11-30",
@@ -472,7 +473,7 @@
 		{
 			"date": "2018-12-03",
 			"type": "lecture",
-			"title": "Designing beyond Web and Mobile"
+			"title": "Designing for Augmented and Virtual Reality"
 		},
 		{
 			"date": "2018-12-03",
