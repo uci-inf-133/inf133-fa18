@@ -6,7 +6,7 @@ block content
 		h1 A5: Improved Sleep tracker in Ionic
 		h3='Due ' + assignment.due
 		p In this assignment, you’ll improve upon your mobile sleep tracking app in Ionic developed in 
-			a(href="/a4") A4
+			a(href="assignments/a4") A4
 			| . You will add either a feature involving native resources or back up logged data to a Firebase database. You will also improve upon the visual and interaction design to follow good principles of mobile design.
 		p You may keep the same partner for A4 and A5. If you had a partner for A4, 
 			strong you may not switch partners to complete A5.
@@ -40,7 +40,7 @@ block content
 			|  file in the root folder. Most of the readme questions are identical to A4 and can be copied from one to another. There are a few A5-specific questions added.
 		h3 Setting up your Workspace
 		p Check the 
-			a(href="a4") A4
+			a(href="assignments/a4") A4
 			|  description for information on setting up Node JS and Ionic.
 		p Cordova should be installed globally to utilize native resources: 
 			code npm install -g cordova
@@ -109,6 +109,7 @@ block content
 			| ). The terminal will provide a URL for accessing your app (follow the "External") link. You will need to make an 
 			a(href="https://dashboard.ionicframework.com/signup?source=framework-home") Ionic account
 			|  to access the DevApp.
+		p Load your app via the DevApp takes over the DevApp. This makes it difficult to refresh changes or go back to the DevApp's menu. Shake your phone if you need to exit your running app and go back to the DevApp menu.
 		h3 Working in pairs
 		p If you are completing the assignment in pairs, you should work in one shared GitHub repository. The easiest way to do this is to have one of you create the repository and 
 			a(href="https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/") add the other as a collaborator
@@ -120,7 +121,7 @@ block content
 			|  offers some suggestions for how to resolve potential conflicts which might arise. But more generally, we suggest that you complete this assignment via pair programming, alternating roles as drivers and navigators.
 		h2 Requirements
 		p In addition to the three features described in 
-			a(href="/a4") A4
+			a(href="assignments/a4") A4
 			| , you must add one of the following two features:
 			ol
 				li A feature involving a native device resource.
@@ -146,7 +147,7 @@ block content
 		p Debugging native features can be challenging because console statements are not visible on a device. One option is to use bindings to display variables or debugging messages on the screen.
 		h3 Option 2: Backing Up Logged Data to Firebase
 		p In A4, all data logged would be cleared when the app is restarted (such as when a change to the code is made). For this A5 option, you must back up all data a person logs to a Firebase database. When a person re-opens the app, all of the data they previously logged should be visible. When a person logs a new record, it must be saved to the database.
-		p You may structure your database however you like, so long as both overnight sleep and sleepiness logs can be saved and retrieved. One challenge is that Firebase expects a JSON object rather than a TypeScript class. You will need to write helper functions to export a class to a JSON object and re-import it.
+		p You may structure your database however you like, so long as both overnight sleep and sleepiness logs can be saved and retrieved. One challenge is that Firebase expects a JSON object rather than a TypeScript class. You will need to write helper functions to export a class to a JSON object and re-import it. You may want to change the name of the collection in the starter code or create multiple collections for different types of data.
 		p You may use an alternate database technology with permission from the course staff, such as MongoDB or MySQL. However, the staff will not provide any support for those options. You are on your own if you choose to pursue another technology. Make sure the readme describes anything the course staff would need to know in order to run your code.
 		h3 Following Good Principles of Mobile Design
 		p We discussed four major principles of good mobile design in 
@@ -161,7 +162,9 @@ block content
 				| 
 				a(href="https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/") (iOS)
 		p These principles are by no means exhaustive, but provide a good foundation for thinking through the design of your app. Your app will be evaluated against these principles. Feel free to pick a single platform to prioritize (and specify which in your readme).
+		h3 Creating a compelling app
 		p Your app will also be evaluated on whether the app would impress a new user in your target audience (specified in your readme). Impressing the target audience can be either aesthetic or functional--e.g., by changing the app's styling or adding additional features.
+		p We have not explicitly covered good principles for visual design in this class. Platform conventions offer some recommendations about visual design, such as using a concise set of colors and ensuring legible fonts. We expect that, at minimum, your app edits Ionic's global styling variables and customizes the appearance of some components.
 		h3 Submitting
 		p Your code repository on GitHub Classroom is your submission. The service will take the latest snapshot of your repository as your submission. Any commits made after the deadline are considered late and are subject to the course's 
 			a(href="/syllabus#duedates") late policy
@@ -175,7 +178,7 @@ block content
 		ul
 			li The added feature, either using a native device resource or backing up logged data to Firebase (3 points)
 			li Following good principles of mobile design (4 points)
-			li Following principles of visual design (2 points)
+			li Creating a compelling app (2 points)
 			li A readme which explains how features are implemented and the design rationale (1 point)
 		p You can receive 2 points of extra credit if you complete both feature options (using a native resource or backing up to Firebase).
 		p The course staff reserves the right to redistribute, penalize, or award bonus points to one or both students in situations where work was not distributed equitably among partnerships.
