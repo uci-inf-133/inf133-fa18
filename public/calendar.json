@@ -467,7 +467,8 @@
 		{
 			"date": "2018-11-30",
 			"type": "lecture",
-			"title": "Designing for Wearables"
+			"title": "Designing for Wearables",
+			"link": "files/lectures/11_30_18-wearables.pdf"
 		},
 		{
 			"date": "2018-11-30",
@@ -491,7 +492,7 @@
 			"date": "2018-12-04",
 			"type": "quiz",
 			"title": "Quiz",
-			"name": "Sensors, Telemetry, Testing, & Other Devices"
+			"name": "Device Resources, Databases, Visual Design, & Other Devices"
 		},
 		{
 			"date": "2018-12-05",
