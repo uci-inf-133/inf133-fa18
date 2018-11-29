@@ -110,6 +110,11 @@ block content
 			a(href="https://dashboard.ionicframework.com/signup?source=framework-home") Ionic account
 			|  to access the DevApp.
 		p Load your app via the DevApp takes over the DevApp. This makes it difficult to refresh changes or go back to the DevApp's menu. Shake your phone if you need to exit your running app and go back to the DevApp menu.
+		p The DevApp has been tested on the UCI campus WiFi as well as personal routers. You may need to manually add the IP address for the DevApp to load your app on the campus WiFi. Enter the external URL and port (e.g., 8100) displayed when you run 
+			code ionic lab
+			| . Be sure to include 
+			code http://
+			|  in the URL declaration.
 		h3 Working in pairs
 		p If you are completing the assignment in pairs, you should work in one shared GitHub repository. The easiest way to do this is to have one of you create the repository and 
 			a(href="https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/") add the other as a collaborator
@@ -148,6 +153,7 @@ block content
 		h3 Option 2: Backing Up Logged Data to Firebase
 		p In A4, all data logged would be cleared when the app is restarted (such as when a change to the code is made). For this A5 option, you must back up all data a person logs to a Firebase database. When a person re-opens the app, all of the data they previously logged should be visible. When a person logs a new record, it must be saved to the database.
 		p You may structure your database however you like, so long as both overnight sleep and sleepiness logs can be saved and retrieved. One challenge is that Firebase expects a JSON object rather than a TypeScript class. You will need to write helper functions to export a class to a JSON object and re-import it. You may want to change the name of the collection in the starter code or create multiple collections for different types of data.
+		p As described in lecture, set your database's permissions to be readable by everyone on the web. You may also assume that there is only one user of the app (e.g., you do not need to support authentication).
 		p You may use an alternate database technology with permission from the course staff, such as MongoDB or MySQL. However, the staff will not provide any support for those options. You are on your own if you choose to pursue another technology. Make sure the readme describes anything the course staff would need to know in order to run your code.
 		h3 Following Good Principles of Mobile Design
 		p We discussed four major principles of good mobile design in 
