@@ -501,7 +501,8 @@
 			"date": "2018-12-05",
 			"type": "lecture",
 			"title": "Wrap-up",
-			"link": "files/lectures/12_05_18-wrap_up.pdf"
+			"link": "files/lectures/12_05_18-wrap_up.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=265999&node=1269431&a=228844232&autoplay=1"
 		},
 		{
 			"date": "2018-12-05",
@@ -515,6 +516,11 @@
 		{
 			"date": "2018-12-07",
 			"type": "officehours_simion"
+		},
+		{
+			"date": "2018-12-10",
+			"type": "officehours_daniel",
+			"time": "11:00"
 		},
 		{
 			"date": "2018-12-11",
