@@ -22,7 +22,7 @@
     "bibtex-parse-js": "0.0.24",
     "component": "^1.1.0",
     "core-js": "^2.5.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "ngx-moment": "^3.4.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
